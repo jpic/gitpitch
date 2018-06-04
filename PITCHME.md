@@ -101,8 +101,7 @@ d'espace) nécessaire à l'exécution de cet algorithme
 
 | 1 | 2 |   |   | n/2 |   |   | n-1 | n |
 | - | - | - | - | -   | - | - | -   | - |
-| a | b | c | d |  e  | f | g |  h  | i |
-| - | - | - | - | -   | - | - | -   | - |
+| . | . | . | . |  .  | . | . |  .  | . |
 
 
 - Parcourir les items dans l'ordre (alphabétique) jusqu'à trouver le nom cherché. |
