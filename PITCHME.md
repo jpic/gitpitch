@@ -12,8 +12,11 @@
 ---
 ## Principes generaux
 
-- Un **algorithme** est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat |
-- Un **problème** est un objet mathématique qui représente une question ou un ensemble de questions auxquelles un ordinateur devrait être en mesure de répondre. |
+- Un *algorithme* est une suite finie et non ambiguë d’opérations ou
+  d'instructions permettant de résoudre un problème ou d'obtenir un résultat |
+- Un *problème* est un objet mathématique qui représente une question ou un
+  ensemble de questions auxquelles un ordinateur devrait être en mesure de
+  répondre. |
 
 ---
 ## Principes generaux
