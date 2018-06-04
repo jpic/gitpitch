@@ -51,17 +51,25 @@ Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où
 - « diviser chacune des difficultés que j’examinerois, en autant de parcelles qu’il se pourroit, et qu’il seroit requis pour les mieux résoudre. » |
 
 ---
-- Sans évoquer explicitement les concepts de boucle, d’itération ou de dichotomie, l’approche de Descartes prédispose la logique à accueillir le concept de programme, mot qui naît en français en 1677. |
+- Sans évoquer explicitement les concepts de boucle, d’itération ou de dichotomie, l’approche de Descartes prédispose la logique à accueillir le concept de programme, mot qui naît en français en 1677.
 - En 1843 , la mathématicienne et pionnière des sciences informatique Ada Lovelace, fille de Lord Byron et assistante de Charles Babbage réalise la première implémentation d'un algorithme sous forme de programme (calcul des nombres de Bernoullii) |
-- Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes posés par David Hilbert en 1900 à Paris est clairement un problème algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme répondant au problème posé. |
+---
+
+Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes posés par David Hilbert en 1900 à Paris est clairement un problème algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme répondant au problème posé.
 
 ---
 
 ### L'époque contemporaine
 
-- L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des formalismes, par exemple celui des machines de Turing, qui permettent de définir précisément ce qu'on entend par "étapes", par "précis" et par "non ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des algorithmes. |
-- Cependant, suivant le formalisme choisi on obtient des approches algorithmiques différentes pour résoudre un même problème. Par exemple l'algorithmique récursive, l'algorithmique parallèle ou l’informatique quantique donnent lieu à des présentations d'algorithmes différentes de celles de l'algorithmique itérative. |
-- Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la deuxième moitié du XXe siècle. Donald Knuth, auteur du traité The Art of Computer Programming, qui décrit de très nombreux algorithmes, a contribué, avec d'autres, à en poser les fondements mathématiques de leur analyse. |
+- L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des formalismes, par exemple celui des machines de Turing, qui permettent de définir précisément ce qu'on entend par "étapes", par "précis" et par "non ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des algorithmes.
+
+---
+
+Cependant, suivant le formalisme choisi on obtient des approches algorithmiques différentes pour résoudre un même problème. Par exemple l'algorithmique récursive, l'algorithmique parallèle ou l’informatique quantique donnent lieu à des présentations d'algorithmes différentes de celles de l'algorithmique itérative.
+
+---
+
+Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la deuxième moitié du XXe siècle. Donald Knuth, auteur du traité The Art of Computer Programming, qui décrit de très nombreux algorithmes, a contribué, avec d'autres, à en poser les fondements mathématiques de leur analyse.
 
 ---
 
