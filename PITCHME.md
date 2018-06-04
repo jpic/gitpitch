@@ -26,10 +26,11 @@
 
 - Les premiers algorithmes dont on a retrouvé des descriptions datent des Babyloniens, au IIIe millénaire av. J.-C.. Ils décrivent des méthodes de calcul et des résolutions d'équations à l'aide d'exemples. |
 - Un algorithme célèbre est celui qui se trouve dans le livre 7 des Éléments d'Euclide, et appelé algorithme d'Euclide. Il permet de trouver le plus grand diviseur commun, ou PGCD, de deux nombres. |
-- C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$. |
 
 ---
+C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$. |
 
+---
 ## Étude systématique
 
 - Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
