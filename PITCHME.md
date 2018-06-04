@@ -16,7 +16,7 @@
 - Un problème est un objet mathématique qui représente une question ou un ensemble de questions auxquelles un ordinateur devrait être en mesure de répondre. |
 
 ---
-- L'algorithmique est l'étude et la production de règles et techniques qui sont impliquées dans la définition et la conception d'algorithmes, |
+- L'algorithmique est l'étude et la production de règles et techniques qui sont impliquées dans la définition et la conception d'algorithmes,
 - c'est-à-dire de processus systématiques de résolution d'un problème permettant de décrire précisément des étapes pour résoudre un problème algorithmique. |
 - Un algorithme prend des données en entrées et calcule des données en retour |
 
