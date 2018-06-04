@@ -1,10 +1,7 @@
-|0|1|0|
-|-|-|-|
-|0|0|1|
-|-|-|-|
-|1|1|1|
-
 # Algorithmie
+
+![Glider](assets/image/Game_of_life_animated_glider.gif)
+
 ### Formation
 
 ---
@@ -136,16 +133,21 @@ Pour certains problèmes, les algorithmes ont une complexité beaucoup trop gran
 l'étude formelle de la quantité de ressources (par exemple de temps ou
 d'espace) nécessaire à l'exécution de cet algorithme
 
+C.A.R. Hoare, The 1980 ACM Turing Award Lecture:
+> Il y a deux manières de construire une architecture logicielle: l'une est de la faire tellement simple qu'il n'y a évidemment aucune faille, l'autre est de la faire tellement compliquée qu'il n'y a aucune faille évidente
+
 ---
 
-### Liste a une dimention
+### Recherche de pic sur liste a une dimention
 
 | a | b | c | d | e | f | g | h | i |
 | - | - | - | - | - | - | - | - | - |
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 
-- 2 est le max si et seulement si b >= a and b >= b
-- 9 est le max si et seulement si i >= h
+- 2 est le pic si et seulement si b >= a and b >= b |
+- 9 est le pic si et seulement si i >= h |
+- problème: trouver un pic si possible |
+- est-ce-qu'un pic existe obligatoirement ? |
 
 ---
 
@@ -156,16 +158,15 @@ d'espace) nécessaire à l'exécution de cet algorithme
 | . | . | . | . |  .  | . | . |  .  | . |
 
 
-- Parcourir la liste de gauche a droite jusqu'à trouver le max. |
-- Le meilleur des cas est celui où le max est le premier dans la liste, le max est alors trouvé instantanément. |
-- Le pire des cas est celui où le max est le dernier dans la liste, le max est alors trouvé après avoir parcouru toute la liste |
+- Parcourir la liste de gauche a droite jusqu'à trouver le pic. |
+- Le meilleur des cas est celui où le pic est le premier dans la liste, le pic est alors trouvé instantanément. |
+- Le pire des cas est celui où le pic est le dernier dans la liste, le pic est alors trouvé après avoir parcouru toute la liste |
 
 ---
 ### Recherche linéaire: complexté
 
 - Si la liste contient 30 000 items, le pire cas demandera 30 000 étapes.
 - La complexité dans le pire des cas de cette première méthode pour n entrées dans l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n : il faut parcourir tous les n items une fois |
-
 
 ---
 
