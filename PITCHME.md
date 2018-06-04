@@ -141,53 +141,33 @@ cherché.
 - “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson |
 
 ---
-
 ## Environnement de développement
 
-- En programmation informatique, un environnement de développement est un
-  ensemble d'outils pour augmenter la productivité des programmeurs qui
-  développent des logiciels |
-- Il comporte un éditeur de texte destiné à la programmation, des fonctions qui
-  permettent, par pression sur un bouton, de démarrer le compilateur ou
-  l'éditeur de liens ainsi qu'un débogueur en ligne, qui permet d'exécuter
-  ligne par ligne le programme en cours de construction. |
-- Certains environnements sont dédiés à un langage de programmation en
-  particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet
-  d'arriver a ses fins le plus facilement. |
-- Les outils qui assistent les développeurs dans toutes les étapes de la
-  réalisation du logiciel: définition, conception, programmation, test et
-  maintenance. |
-- Ces outils tiennent également compte des différents rôles au sein d'une
-  équipe de programmation: programmeur, manager et responsable qualité |
+- En programmation informatique, un environnement de développement est un ensemble d'outils pour augmenter la productivité des programmeurs qui développent des logiciels |
+- Il comporte un éditeur de texte destiné à la programmation, des fonctions qui permettent, de démarrer le compilateur ou l'éditeur de liens ainsi qu'un débogueur en ligne, qui permet d'exécuter ligne par ligne le programme en cours de construction. |
+
+---
+## Environnement de développement
+
+- Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement. |
+- Les outils qui assistent les développeurs dans toutes les étapes de la réalisation du logiciel: définition, conception, programmation, test et maintenance. |
+- Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation: programmeur, manager et responsable qualité |
 
 ---
 
 ## Environnement de développement: outils
 
-- toujours un éditeur de texte incorporé, avec souvent la possibilité de le
-  remplacer par un autre éditeur. typiquement des fonctions de mise en évidence
-  alignées avec le langage de programmation: indentation automatique des blocs
-  de code, marquage des délimiteurs (parenthèses ou accolades), et mise en
-  évidence des mots clés du langage par de la couleur ou des caractères gras |
-- outil de création d'interface graphique. Un tel outil permet au programmeur
-  de gagner un temps significatif dans la construction de l'interface graphique
-  de son programme. Jusqu'à l'arrivée de la technologie Java, de tels outils
-  ciblaient toujours un système d'exploitation en particulier.
+- toujours un éditeur de texte incorporé, avec souvent la possibilité de le remplacer par un autre éditeur. typiquement des fonctions de mise en évidence alignées avec le langage de programmation: indentation automatique des blocs de code, marquage des délimiteurs (parenthèses ou accolades), et mise en évidence des mots clés du langage par de la couleur ou des caractères gras |
+- outil de création d'interface graphique. Un tel outil permet au programmeur de gagner un temps significatif dans la construction de l'interface graphique de son programme. Jusqu'à l'arrivée de la technologie Java, de tels outils ciblaient toujours un système d'exploitation en particulier.
 - outil pour réaliser automatiquement des tests.
-- outils d'analyse du code source. Par exemple un générateur de graphique qui
-  permet d'obtenir le diagramme en arbre de l'utilisation d'une fonction du
-  programme.
-- Un outil de contrôle de versions. Un tel outil permet à plusieurs
-  programmeurs de travailler simultanément sur les fichiers de code source du
-  programme.
 
 ---
 
 ## Environnement de développement: languages
 
-- Java: compile le code source en bytecode pour la JVM
-- C++: compile le code source en language machine
-- Visual Basic, Python, PHP: interprétés
+- Java: compile le code source en bytecode pour la JVM |
+- C++: compile le code source en language machine |
+- Visual Basic, Python, PHP: interprétés |
 
 ---
 
