@@ -138,7 +138,7 @@ cherché.
 
 - Ecrit par l'etre humain, l'algorithme est traduit en instructions comprehensibles par l'ordinnateur. |
 - Sa premiere fonction est d'etre comprise par un autre etre humain dans l'equipe de developpement. |
-- “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson
+- “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson |
 
 ---
 
@@ -158,7 +158,7 @@ cherché.
   réalisation du logiciel: définition, conception, programmation, test et
   maintenance. |
 - Ces outils tiennent également compte des différents rôles au sein d'une
-  équipe de programmation: programmeur, manager et responsable qualité
+  équipe de programmation: programmeur, manager et responsable qualité |
 
 ---
 
