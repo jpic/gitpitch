@@ -34,34 +34,25 @@
 
 - Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
 - Dans son ouvrage Abrégé du calcul par la restauration et la comparaison, il étudie toutes les équations du second degré et en donne la résolution par des algorithmes généraux. |
+
+---
+
 - Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples. |
 - Le mot « algorithme » vient du nom du mathématicien Al-Khwârizmî (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. « Algorithme » a donné « algorithmique » auxquels certains préfèrent le néologisme « algorithmie ».
 
 ---
 
-- Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où
-  la thèse s’affine étape par étape, itérativement, jusqu’à une certaine
-  convergence et ceci conformément au déroulement d’un algorithme. À la même
-  époque, au XIIe siècle, le moine Adelard de Bath introduit le terme latin de
-  algorismus, par référence au nom de Al Khuwarizmi. Ce mot donne algorithme en
-  français en 1554. |
-- Au XVIIe siècle, on pourrait entrevoir une certaine allusion à la méthode
-  algorithmique chez René Descartes dans la méthode générale proposée par le
-  Discours de la méthode (1637), notamment quand, en sa deuxième partie, le
-  mathématicien français propose |
-- « diviser chacune des difficultés que j’examinerois, en autant de parcelles
-  qu’il se pourroit, et qu’il seroit requis pour les mieux résoudre. » |
-- Sans évoquer explicitement les concepts de boucle, d’itération ou de
-  dichotomie, l’approche de Descartes prédispose la logique à accueillir le
-  concept de programme, mot qui naît en français en 1677. |
-- En 1843 , la mathématicienne et pionnière des sciences informatique Ada
-  Lovelace, fille de Lord Byron et assistante de Charles Babbage réalise la
-  première implémentation d'un algorithme sous forme de programme (calcul des
-  nombres de Bernoullii) |
-- Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes
-  posés par David Hilbert en 1900 à Paris est clairement un problème
-  algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme
-  répondant au problème posé.
+Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où la thèse s’affine étape par étape, itérativement, jusqu’à une certaine convergence et ceci conformément au déroulement d’un algorithme. À la même époque, au XIIe siècle, le moine Adelard de Bath introduit le terme latin de algorismus, par référence au nom de Al Khuwarizmi. Ce mot donne algorithme en français en 1554.
+
+---
+
+- Au XVIIe siècle, on pourrait entrevoir une certaine allusion à la méthode algorithmique chez René Descartes dans la méthode générale proposée par le Discours de la méthode (1637), notamment quand, en sa deuxième partie, le mathématicien français propose |
+- « diviser chacune des difficultés que j’examinerois, en autant de parcelles qu’il se pourroit, et qu’il seroit requis pour les mieux résoudre. » |
+
+---
+- Sans évoquer explicitement les concepts de boucle, d’itération ou de dichotomie, l’approche de Descartes prédispose la logique à accueillir le concept de programme, mot qui naît en français en 1677. |
+- En 1843 , la mathématicienne et pionnière des sciences informatique Ada Lovelace, fille de Lord Byron et assistante de Charles Babbage réalise la première implémentation d'un algorithme sous forme de programme (calcul des nombres de Bernoullii) |
+- Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes posés par David Hilbert en 1900 à Paris est clairement un problème algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme répondant au problème posé.
 
 ---
 
