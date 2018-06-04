@@ -38,7 +38,7 @@ C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$
 
 ---
 
-- Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples. |
+- Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples.
 - Le mot algorithme vient du nom du mathématicien Al-Khwârizmî (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. Algorithme a donné algorithmique auxquels certains préfèrent le néologisme algorithmie. |
 
 ---
