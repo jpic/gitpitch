@@ -16,8 +16,6 @@
 - Un problème est un objet mathématique qui représente une question ou un ensemble de questions auxquelles un ordinateur devrait être en mesure de répondre. |
 
 ---
-## Principes generaux
-
 - L'algorithmique est l'étude et la production de règles et techniques qui sont impliquées dans la définition et la conception d'algorithmes, |
 - c'est-à-dire de processus systématiques de résolution d'un problème permettant de décrire précisément des étapes pour résoudre un problème algorithmique. |
 - Un algorithme prend des données en entrées et calcule des données en retour |
@@ -26,32 +24,18 @@
 
 ## Antiquité
 
-- Les premiers algorithmes dont on a retrouvé des descriptions datent des
-  Babyloniens, au IIIe millénaire av. J.-C.. Ils décrivent des méthodes de
-  calcul et des résolutions d'équations à l'aide d'exemples. |
-- Un algorithme célèbre est celui qui se trouve dans le livre 7 des Éléments
-  d'Euclide, et appelé algorithme d'Euclide. Il permet de trouver le plus grand
-  diviseur commun, ou PGCD, de deux nombres. |
-- C'est Archimède qui proposa le premier un algorithme pour le calcul de
-  $$π^2$$. |
+- Les premiers algorithmes dont on a retrouvé des descriptions datent des Babyloniens, au IIIe millénaire av. J.-C.. Ils décrivent des méthodes de calcul et des résolutions d'équations à l'aide d'exemples. |
+- Un algorithme célèbre est celui qui se trouve dans le livre 7 des Éléments d'Euclide, et appelé algorithme d'Euclide. Il permet de trouver le plus grand diviseur commun, ou PGCD, de deux nombres. |
+- C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$. |
 
 ---
 
 ## Étude systématique
 
-- Le premier à avoir systématisé des algorithmes est le mathématicien perse
-  Al-Khwârizmî, actif entre 813 et 833. |
-- Dans son ouvrage Abrégé du calcul par la restauration et la comparaison, il
-  étudie toutes les équations du second degré et en donne la résolution par des
-  algorithmes généraux. |
-- Il utilise des méthodes semblables à celles des Babyloniens, mais se
-  différencie par ses explications systématiques là où les Babyloniens
-  donnaient seulement des exemples. |
-- Le mot « algorithme » vient du nom du mathématicien Al-Khwârizmî (latinisé au
-  Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage
-  systématique donnant des solutions aux équations linéaires et quadratiques. «
-  Algorithme » a donné « algorithmique » auxquels certains préfèrent le
-  néologisme « algorithmie ».
+- Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
+- Dans son ouvrage Abrégé du calcul par la restauration et la comparaison, il étudie toutes les équations du second degré et en donne la résolution par des algorithmes généraux. |
+- Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples. |
+- Le mot « algorithme » vient du nom du mathématicien Al-Khwârizmî (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. « Algorithme » a donné « algorithmique » auxquels certains préfèrent le néologisme « algorithmie ».
 
 ---
 
