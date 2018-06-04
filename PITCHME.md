@@ -102,9 +102,10 @@ d'espace) nécessaire à l'exécution de cet algorithme
 | 1 | 2 |   |   | n/2 |   |   | n-1 | n |
 | - | - | - | - | -   | - | - | -   | - |
 |   |   |   |   |     |   |   |     |   |
+| - | - | - | - | -   | - | - | -   | - |
 
 
-- Parcourir les pages dans l'ordre (alphabétique) jusqu'à trouver le nom cherché. |
+- Parcourir les items dans l'ordre (alphabétique) jusqu'à trouver le nom cherché. |
 - Le meilleur des cas est celui où le max est le premier dans la liste, le max est alors trouvé instantanément. |
 - Le pire des cas est celui où le nom est le dernier dans l'annuaire, le nom est alors trouvé après avoir parcouru tous les noms |
 
