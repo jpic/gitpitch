@@ -104,40 +104,33 @@ d'espace) nécessaire à l'exécution de cet algorithme
 | . | . | . | . |  .  | . | . |  .  | . |
 
 
-- Parcourir les items dans l'ordre (alphabétique) jusqu'à trouver le nom cherché. |
+- Parcourir la liste de gauche a droite jusqu'à trouver le max. |
 - Le meilleur des cas est celui où le max est le premier dans la liste, le max est alors trouvé instantanément. |
-- Le pire des cas est celui où le nom est le dernier dans l'annuaire, le nom est alors trouvé après avoir parcouru tous les noms |
+- Le pire des cas est celui où le max est le dernier dans la liste, le max est alors trouvé après avoir parcouru toute la liste |
+
+---
+### Recherche linéaire: complexté
+
+- Si la liste contient 30 000 items, le pire cas demandera 30 000 étapes.
+- La complexité dans le pire des cas de cette première méthode pour n entrées dans l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n : il faut parcourir tous les n items une fois |
+
 
 ---
 
+### Comment optimiser l'algorithme ?
+
+---
 ### Recherche dichotomique : diviser et concquerir
 
-ouvrir l'annuaire au milieu, si le nom qui s'y trouve est plus loin
-alphabétiquement que le nom cherché, regarder avant, sinon, regarder après.
+Ouvrir la liste au milieu, si le nombre qui s'y trouve est plus loin
+que le max, regarder avant, sinon, regarder après.
+
 Refaire l'opération qui consiste à couper les demi-annuaires (puis les quarts
 d'annuaires, puis les huitièmes d'annuaires, etc.) jusqu'à trouver le nom
 cherché.
 
 ---
-
-### Methode 0: Recherche linéaire
-
-
----
-
-### Recherche linéaire: exemple
-
-Si l'annuaire contient 30 000 noms, le pire cas demandera 30 000 étapes. La
-complexité dans le pire des cas de cette première méthode pour n  entrées dans
-l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de
-calcul est de l'ordre de grandeur de n : il faut parcourir tous les n noms une
-fois.
-
----
-
-### Methode 1: recherche dichotomique
-
-
+### Recherche dichotomique : complexité
 
 ---
 
