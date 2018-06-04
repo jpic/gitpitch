@@ -1,10 +1,8 @@
-|-|-|-|
 |0|1|0|
 |-|-|-|
 |0|0|1|
 |-|-|-|
 |1|1|1|
-|-|-|-|
 
 # Algorithmie
 ### Formation
@@ -73,6 +71,60 @@ Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la de
 
 ---
 
+## L'algorithmique dans le projet
+
+- Ecrit par l'etre humain, l'algorithme est traduit en instructions comprehensibles par l'ordinnateur. |
+- Sa premiere fonction est d'etre comprise par un autre etre humain dans l'equipe de developpement. |
+- “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson |
+
+---
+## Environnement de développement
+
+- En programmation informatique, un environnement de développement est un ensemble d'outils pour augmenter la productivité des programmeurs qui développent des logiciels |
+- Il comporte un éditeur de texte destiné à la programmation, des fonctions qui permettent, de démarrer le compilateur ou l'éditeur de liens ainsi qu'un débogueur en ligne, qui permet d'exécuter ligne par ligne le programme en cours de construction. |
+
+---
+## Environnement de développement
+
+- Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement. |
+- Les outils qui assistent les développeurs dans toutes les étapes de la réalisation du logiciel: définition, conception, programmation, test et maintenance. |
+- Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation
+
+---
+
+## Environnement de développement: éditeur de code
+
+Toujours un éditeur de texte incorporé, avec souvent la possibilité de le remplacer par un autre éditeur. typiquement des fonctions de mise en évidence alignées avec le langage de programmation: indentation automatique des blocs de code, marquage des délimiteurs (parenthèses ou accolades), et mise en évidence des mots clés du langage par de la couleur ou des caractères gras
+
+---
+## Environnement de développement: création d'interface graphique
+
+Un tel outil permet au programmeur de gagner un temps significatif dans la construction de l'interface graphique de son programme. Jusqu'à l'arrivée de la technologie Java, de tels outils ciblaient toujours un système d'exploitation en particulier.
+
+---
+## Environnement de développement: automatisation des tests
+
+- outil pour réaliser automatiquement des tests.
+
+---
+
+## Environnement de développement: languages
+
+- Java: compile le code source en bytecode pour la JVM |
+- C++: compile le code source en language machine |
+- Visual Basic, Python, PHP: interprétés |
+
+---
+
+
+
+---
+# Syntaxe des éléments clés
+## Principe d'une machine à état et universalité de Turing
+
+
+---
+
 ### Heuristiques
 
 Pour certains problèmes, les algorithmes ont une complexité beaucoup trop grande pour obtenir un résultat en temps raisonnable, même si l’on pouvait utiliser une puissance de calcul phénoménale.
@@ -131,52 +183,6 @@ cherché.
 
 ---
 ### Recherche dichotomique : complexité
-
----
-
-## L'algorithmique dans le projet
-
-- Ecrit par l'etre humain, l'algorithme est traduit en instructions comprehensibles par l'ordinnateur. |
-- Sa premiere fonction est d'etre comprise par un autre etre humain dans l'equipe de developpement. |
-- “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson |
-
----
-## Environnement de développement
-
-- En programmation informatique, un environnement de développement est un ensemble d'outils pour augmenter la productivité des programmeurs qui développent des logiciels |
-- Il comporte un éditeur de texte destiné à la programmation, des fonctions qui permettent, de démarrer le compilateur ou l'éditeur de liens ainsi qu'un débogueur en ligne, qui permet d'exécuter ligne par ligne le programme en cours de construction. |
-
----
-## Environnement de développement
-
-- Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement. |
-- Les outils qui assistent les développeurs dans toutes les étapes de la réalisation du logiciel: définition, conception, programmation, test et maintenance. |
-- Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation: programmeur, manager et responsable qualité |
-
----
-
-## Environnement de développement: outils
-
-- toujours un éditeur de texte incorporé, avec souvent la possibilité de le remplacer par un autre éditeur. typiquement des fonctions de mise en évidence alignées avec le langage de programmation: indentation automatique des blocs de code, marquage des délimiteurs (parenthèses ou accolades), et mise en évidence des mots clés du langage par de la couleur ou des caractères gras |
-- outil de création d'interface graphique. Un tel outil permet au programmeur de gagner un temps significatif dans la construction de l'interface graphique de son programme. Jusqu'à l'arrivée de la technologie Java, de tels outils ciblaient toujours un système d'exploitation en particulier.
-- outil pour réaliser automatiquement des tests.
-
----
-
-## Environnement de développement: languages
-
-- Java: compile le code source en bytecode pour la JVM |
-- C++: compile le code source en language machine |
-- Visual Basic, Python, PHP: interprétés |
-
----
-
-
-
----
-# Syntaxe des éléments clés
-## Principe d'une machine à état et universalité de Turing
-
 
 ---?image=assets/image/kyle-gregory-devaras.jpg
 
