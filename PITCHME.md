@@ -28,7 +28,7 @@
 - Un algorithme célèbre est celui qui se trouve dans le livre 7 des Éléments d'Euclide, et appelé algorithme d'Euclide. Il permet de trouver le plus grand diviseur commun, ou PGCD, de deux nombres. |
 
 ---
-C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$. |
+C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$.
 
 ---
 ## Étude systématique
@@ -39,7 +39,7 @@ C'est Archimède qui proposa le premier un algorithme pour le calcul de $$π^2$$
 ---
 
 - Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples. |
-- Le mot « algorithme » vient du nom du mathématicien Al-Khwârizmî (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. « Algorithme » a donné « algorithmique » auxquels certains préfèrent le néologisme « algorithmie ».
+- Le mot algorithme vient du nom du mathématicien Al-Khwârizmî (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. Algorithme a donné algorithmique auxquels certains préfèrent le néologisme algorithmie.
 
 ---
 
@@ -53,37 +53,91 @@ Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où
 ---
 - Sans évoquer explicitement les concepts de boucle, d’itération ou de dichotomie, l’approche de Descartes prédispose la logique à accueillir le concept de programme, mot qui naît en français en 1677. |
 - En 1843 , la mathématicienne et pionnière des sciences informatique Ada Lovelace, fille de Lord Byron et assistante de Charles Babbage réalise la première implémentation d'un algorithme sous forme de programme (calcul des nombres de Bernoullii) |
-- Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes posés par David Hilbert en 1900 à Paris est clairement un problème algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme répondant au problème posé.
+- Le dixième problème de Hilbert qui fait partie de la liste des 23 problèmes posés par David Hilbert en 1900 à Paris est clairement un problème algorithmique. En l'occurrence, la réponse est qu'il n'y a pas d'algorithme répondant au problème posé. |
 
 ---
 
 ### L'époque contemporaine
 
-- L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des
-  formalismes, par exemple celui des **machines de Turing**, qui permettent de
-  définir précisément ce qu'on entend par "étapes", par "précis" et par "non
-  ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des
-  algorithmes. |
-- Cependant, suivant le formalisme choisi on obtient des approches
-  algorithmiques différentes pour résoudre un même problème. Par exemple
-  l'algorithmique récursive, l'algorithmique parallèle ou l’informatique
-  quantique donnent lieu à des présentations d'algorithmes différentes de
-  celles de l'algorithmique itérative. |
-- Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la
-  deuxième moitié du XXe siècle. Donald Knuth, auteur du traité The Art of
-  Computer Programming, qui décrit de très nombreux algorithmes, a contribué,
-  avec d'autres, à en poser les fondements mathématiques de leur analyse.
+- L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des formalismes, par exemple celui des machines de Turing, qui permettent de définir précisément ce qu'on entend par "étapes", par "précis" et par "non ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des algorithmes. |
+- Cependant, suivant le formalisme choisi on obtient des approches algorithmiques différentes pour résoudre un même problème. Par exemple l'algorithmique récursive, l'algorithmique parallèle ou l’informatique quantique donnent lieu à des présentations d'algorithmes différentes de celles de l'algorithmique itérative. |
+- Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la deuxième moitié du XXe siècle. Donald Knuth, auteur du traité The Art of Computer Programming, qui décrit de très nombreux algorithmes, a contribué, avec d'autres, à en poser les fondements mathématiques de leur analyse.
+
+---
+
+### Heuristiques
+
+Pour certains problèmes, les algorithmes ont une complexité beaucoup trop grande pour obtenir un résultat en temps raisonnable, même si l’on pouvait utiliser une puissance de calcul phénoménale.
+
+---
+
+### Complexité d'un algorithme
+
+l'étude formelle de la quantité de ressources (par exemple de temps ou
+d'espace) nécessaire à l'exécution de cet algorithme
+
+---
+
+### Liste a une dimention
+
+| a | b | c | d | e | f | g | h | i |
+| - | - | - | - | - | - | - | - | - |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+- 2 est le max si et seulement si b >= a and b >= b
+- 9 est le max si et seulement si i >= h
+
+---
+
+### Recherche linéaire
+
+| 1 | 2 |   |   | n/2 |   |   | n-1 | n |
+| - | - | - | - | -   | - | - | -   | - |
+|   |   |   |   |     |   |   |     |   |
+
+
+- Parcourir les pages dans l'ordre (alphabétique) jusqu'à trouver le nom cherché. |
+- Le meilleur des cas est celui où le max est le premier dans la liste, le max est alors trouvé instantanément. |
+- Le pire des cas est celui où le nom est le dernier dans l'annuaire, le nom est alors trouvé après avoir parcouru tous les noms |
+
+---
+
+### Recherche dichotomique : diviser et concquerir
+
+ouvrir l'annuaire au milieu, si le nom qui s'y trouve est plus loin
+alphabétiquement que le nom cherché, regarder avant, sinon, regarder après.
+Refaire l'opération qui consiste à couper les demi-annuaires (puis les quarts
+d'annuaires, puis les huitièmes d'annuaires, etc.) jusqu'à trouver le nom
+cherché.
+
+---
+
+### Methode 0: Recherche linéaire
+
+
+---
+
+### Recherche linéaire: exemple
+
+Si l'annuaire contient 30 000 noms, le pire cas demandera 30 000 étapes. La
+complexité dans le pire des cas de cette première méthode pour n  entrées dans
+l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de
+calcul est de l'ordre de grandeur de n : il faut parcourir tous les n noms une
+fois.
+
+---
+
+### Methode 1: recherche dichotomique
+
+
 
 ---
 
 ## L'algorithmique dans le projet
 
-- Ecrit par l'etre humain, l'algorithme est traduit en instructions
-  comprehensibles par l'ordinnateur. |
-- Sa premiere fonction est d'etre comprise par un autre etre humain dans
-  l'equipe de developpement. |
-- “One of my most productive days was throwing away 1000 lines of code.” – Ken
-  Thompson
+- Ecrit par l'etre humain, l'algorithme est traduit en instructions comprehensibles par l'ordinnateur. |
+- Sa premiere fonction est d'etre comprise par un autre etre humain dans l'equipe de developpement. |
+- “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson
 
 ---
 
@@ -136,64 +190,6 @@ Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où
 
 ---
 
-### Complexité d'un algorithme
-
-l'étude formelle de la quantité de ressources (par exemple de temps ou
-d'espace) nécessaire à l'exécution de cet algorithme
-
-### Liste a une dimention
-
-| a | b | c | d | e | f | g | h | i |
-| - | - | - | - | - | - | - | - | - |
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-
-- 2 est le max si et seulement si b >= a and b >= b
-- 9 est le max si et seulement si i >= h
-
-### Recherche linéaire
-
-| 1 | 2 |   |   | n/2 |   |   | n-1 | n |
-| - | - | - | - | -   | - | - | -   | - |
-|   |   |   |   |     |   |   |     |   |
-
-### Exemple de la recherche dans une liste triée
-
-Examples:
-
-0. Recherche linéaire : parcourir les pages dans l'ordre (alphabétique) jusqu'à
-   trouver le nom cherché.
-1. Recherche dichotomique : ouvrir l'annuaire au milieu, si le nom qui s'y
-   trouve est plus loin alphabétiquement que le nom cherché, regarder avant,
-   sinon, regarder après. Refaire l'opération qui consiste à couper les
-   demi-annuaires (puis les quarts d'annuaires, puis les huitièmes d'annuaires,
-   etc.) jusqu'à trouver le nom cherché.
-
----
-
-### Methode 0: Recherche linéaire
-
-- Le meilleur des cas est celui où le nom est le premier dans l'annuaire, le
-  nom est alors trouvé instantanément.
-- Le pire des cas est celui où le nom est le dernier dans l'annuaire, le nom
-  est alors trouvé après avoir parcouru tous les noms
-
----
-
-### Recherche linéaire: exemple
-
-Si l'annuaire contient 30 000 noms, le pire cas demandera 30 000 étapes. La
-complexité dans le pire des cas de cette première méthode pour n  entrées dans
-l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de
-calcul est de l'ordre de grandeur de n : il faut parcourir tous les n noms une
-fois.
-
----
-
-### Methode 1: recherche dichotomique
-
-
-
----
 
 
 ---
