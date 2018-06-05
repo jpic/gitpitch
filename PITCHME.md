@@ -566,10 +566,143 @@ Typiquement, le but des langages dits de "scripting" est d'être plus faciles à
 
 ---
 
-# Structures de contrôles : les conditions
+# Structures de contrôle
+
+Un bloc d'instruction regroupe plusieurs instructions contigües.
+
+Une structure de contrôle est une instruction particulière d'un langage de programmation impératif pouvant dévier le flot de contrôle du programme la contenant lorsqu'elle est exécutée.
+
+Une structure de contrôle permet de décider si on rentre dans un bloc d'instruction ou pas.
 
 ---
 
+# Structures de contrôle: conditions
+
+Les sauts conditionnels permettent de réaliser un branchement si une condition est vérifiée. Si la condition n'est pas vérifiée, l'exécution se poursuit séquentiellement.
+
+Structure si-alors(-sinon):
+
+```
+If (condition booléenne) Then
+   (conséquent)
+Else
+   (alternative)
+End If
+```
+
+---
+
+# Exemple de si-alors-sinon en Python
+
+```python
+print('Départ')
+
+a = 1
+if a == 1:
+    print('Vré')
+else:
+    print('Faux!')
+
+print('Fin')
+```
+
+Affichera:
+
+```
+Départ
+Vré
+Fin
+```
+
+---
+
+# Structures de contrôles : les boucles
+
+Une boucle est une structure de contrôle destinée à exécuter une portion de code plusieurs fois de suite, la structure de contrôle branchant le pointeur ordinal au début du code tant qu'une condition de continuation est remplie ou, selon les boucles, qu'une condition de sortie n'est pas remplie.
+
+---
+
+# Types de boucles
+
+Les langages proposent en général plusieurs type de boucles :
+
+- boucle à pré-condition : la condition est vérifiée avant la première boucle
+- boucle à post-condition : la condition est vérifiée après la première boucle
+- boucle à condition d'arrêt : la condition est vérifiée au milieu de la boucle
+- boucle itérative : un compteur est utilisé pour compter le nombre d'itérations
+- boucle de parcours : la boucle est exécutée sur chacun des éléments d'une liste
+
+---
+
+# Boucles pré/post condition
+
+Les langages peuvent proposer plusieurs type de boucles à pré et post-condition :
+
+- boucle "tant que", qui est exécuté tant que la condition est vraie (en précondition : "while test ; do quelquechose; done". En postcondition : "do quelquechose; while test")
+- boucle "jusqu'à (ce que)", qui est exécuté jusqu'à ce que la condition soit vraie (pré condition "until test ; do quelquechose; done". En postcondition, "do quelquechose ; until test")
+
+---
+
+# Exemple de boucle "tant que"
+
+Structure:
+
+```
+While (condition booléenne) Then
+   (conséquent)
+End While
+```
+
+Exemple:
+
+```python
+a = 3
+while a > 0:
+    print(a)
+    a = a - 1
+```
+
+Affichera:
+
+```
+3
+2
+1
+```
+
+---
+
+# Exemple de boucle "jusqu'à"
+
+Structure:
+
+```
+Until (condition booléenne) Then
+   (conséquent)
+End While
+```
+
+Exemple:
+
+```bash
+a = 3
+until (( a == 0 )); do
+    a=$(( a - 1))
+    echo $a
+done
+2
+1
+0
+
+```
+
+Affichera:
+
+```
+3
+2
+1
+```
 ---
 
 ### Heuristiques
