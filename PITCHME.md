@@ -165,6 +165,7 @@ L'alphabet contient un symbole spécial appelé « symbole blanc » et un ou plu
 On peut toujours encoder un symbole de l'alphabet en une suite de 1 et de 0, par example sur deux bits pour trois caractères:
 
 | A | 00 |
+| - | -- |
 | B | 01 |
 | C | 11 |
 
@@ -318,19 +319,256 @@ Exemple de nom de variable non valide en C :
 
 ---
 
+
 # Nom de variable: enjeux
 
-Mieux on choisit les noms de variables
+Mieux on choisit les noms de variables, plus le code sera relisible. On remarque avec l'experience que ça vaut le coup de passer plus de temps, 10, 15 ou 20 minutes à choisir un nom de variable qu'on va utiliser pendant des années. Quand on peut trouver un nom de variable qui loge sur un nom simple c'est mieux.
+
+En Python, il n’y a pas de déclaration de type. Le nom d’une variable a donc d’autant plus d’importance pour expliquer ce qu’il y a dedans.
+
+---
+
+Ainsi, le premier caractère ne peut être un chiffre, car cela permet de faciliter la compilation ou l'interprétation du programme en ôtant une ambiguïté : quand le compilateur lit un chiffre, il sait que les caractères qui suivront constitueront une valeur numérique. De même, s'il lit une lettre ou un souligné, il saura qu'il a affaire à une variable.
+
+---
+
+# Nom de variable: exemple
+
+Est-ce-qu'on comprend ce que fait cet algorithme en Python ?
+
+```python
+best = []
+for k, v in data.items():
+    if v > top:
+        best.append(k)
+```
+
+---
+
+Est-ce-que c'est plus clair avec des noms explicites ?
+
+```python
+best_players = []
+for player, score in data.items():
+    if score > top_score :
+        best_players.append(player)
+```
+
+---
+
+# Typage
+
+En programmation informatique, un type de donnée, ou simplement type, définit la nature des valeurs que peut prendre une donnée, ainsi que les opérateurs qui peuvent lui être appliqués.
+
+---
+
+# Examples de types prédéfinis
+
+Tous les langages de programmation offrent des types de base correspondant aux données qui peuvent être traitées directement — à savoir : sans conversion ou formatage préalable — par le processeur. Ces types de base sont souvent :
+
+- Type booléen : valeurs vrai ou faux — ou respectivement 1 ou 0 ;
+- Type entier signé ou non signé : valeurs codées sur 8 bits, 16 bits, 32 bits voire 64 bits.
+- Type réel en virgule flottante.
+
+Les langages permettant un accès direct à la mémoire du système offrent par ailleurs le type pointeur, et un type octet.
+
+Beaucoup proposent également un type prédéfini, string, pour les chaînes de caractères. Les langages de haut niveau peuvent également supporter nativement des types correspondant à d'autres structures de données.
+
+---
+
+# Types paramétrés
+
+Par exemple la déclaration des pointeurs ou des tableaux en langage C nécessite de préciser le type qui doit servir de base aux données manipulées. La programmation générique étend cette pratique pour permettre à l'utilisateur de créer ses propres types paramétrés.
+
+```java
+Collection<String> coll = new LinkedList<String>();
+```
+
+---
+
+# Types énumérés
+
+Des langages permettent au développeur de définir des types spécifiques à son application. Les types énumérés correspondent à des ensembles « finis » (cf. les remarques ci-après) de valeurs possibles pour une variable. Le code suivant illustre la définition d'un nouveau type, suivie de la déclaration d'une variable typée :
+
+```c
+type couleur : {rouge, bleu, vert};
+var c : couleur;  // La variable c, du type couleur, peut prendre les valeurs
+	                // rouge, bleu ou vert uniquement.
+```
+
+---
+
+# Types composés
+
+Les types composés (struct en C, record en Pascal) permettent de grouper plusieurs champs de types distincts dans une même variable (qui contient alors des « sous-variables »).
+
+En programmation orientée objet, on nomme classe un type composé associé à du code spécifique — la définition des méthodes de la classe — propre à la manipulation de variables de ce type.
+
+---
+
+# Types hiérarchiques
+
+La programmation orientée objet étend le paradigme précédent en organisant hiérarchiquement les classes de telle manière qu'une variable d'une sous-classe puisse être utilisée de manière transparente à la place de n'importe quelle classe située à un niveau supérieur dans la hiérarchie définie.
+
+---
+
+# Types opaques
+
+Un type opaque est un type incomplètement défini et/ou dont la nature est masquée. Le développeur ne peut ni en examiner le contenu, ni le modifier, et doit simplement le stocker et le transmettre. À cet effet, seule la taille d'un type opaque est réellement connue.
+
+Typiquement, les données opaques sont des handles (terminologie Windows), des descripteurs de fichier (terminologie Unix), des clés, des pointeurs vers des structures masquées (ex. : `FILE*` de la bibliothèque standard du C), etc. La seule notion cruciale, c'est qu'une variable opaque est fournie via une fonction dédiée de création (de type constructeur), transmise telle quelle aux fonctions utilisatrices (souvent via un passage par référence), et enfin détruite via une fonction de libération (de type destructeur).
+
+La possibilité – ou non – d'avoir des types opaques est totalement dépendante du langage de programmation utilisé.
+
+---
+
+# Résumé des types de données
+
+- prédéfinis: booléan, entier (signé/non-signé), réel (virgule flottante), ... |
+- paramétrés: types qui prennent d'autres type en paramêtre, |
+- énumérés: ensembles « finis » de valeurs possibles, |
+- composés: struct (C), record (Pascal), class (Python),
+- hiérarchiques: sous classes
+- opaques: descripteurs de fichiers, cléfs ...
+
+---
+
+# Typage statique et typage dynamique
+
+On parle de typage statique quand la majorité des vérifications de type sont effectuées au moment de la compilation.
+
+Au contraire, on parle de typage dynamique quand ces vérifications sont effectuées pendant l'exécution.
+
+---
+
+# Typage explicite et typage implicite
+
+Le typage explicite oblige l'utilisateur à indiquer les types qu'il utilise, par exemple lors des déclarations de variables ou de fonctions.
+
+Par exemple, en langage C, le typage est explicite :
+
+```c
+int i = 0;  // cette déclaration indique explicitement que
+            // la variable i est de type entier
+```
+
+Au contraire, le typage implicite permet au developpeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
+
+Par exemple, en Objective Caml, le typage est implicite :
+
+```
+let i = 0 ;; (* le compilateur détermine automatiquement que
+                la variable i est de type entier *)
+```
+
+---
+
+# Typage fort et typage faible
+
+La sûreté du typage est destinée à prévenir les erreurs de type, à savoir : l'emploi d'une variable dont le format est incompatible. La définition d'un langage fortement typé est assez floue :
+
+- soit elle est à rapprocher de celle de langage à typage statique : le compilateur assure la détection au plus tôt des erreurs de type
+- soit on juge de la force du typage d'un langage selon les conversions de type implicites qu'il autorise.
 
 
-- son nom c'est-à-dire sous quel nom est déclarée la variable ; |
-- son type, c'est la convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits) ; |
-- sa valeur, c'est la séquence de bits elle-même, elle ne peut varier au cours du temps si on utilise le mot-clef const ; |
-- son adresse, c'est l'endroit dans la mémoire où elle est stockée ; |
-- sa portée, c'est la portion de code source où elle est accessible, par exemple, la portée d'une variable (non globale) en C s'entend de sa définition à la fin du bloc où elle est définie. |
-- sa visibilité, c'est un ensemble de règles qui fixe qui peut utiliser la variable (exemple : mots-clefs public, private, protected, ou le masquage d'une variable par une autre) ; |
-- sa durée de vie, c'est le temps d'exécution pendant laquelle la variable existe. En C et en C++ une variable contenue dans un bloc de code limité par des accolades "{}" possède la durée de vie correspondant au temps d'exécution de ce bloc. Il ne faut pas confondre la durée de vie d'une variable locale et sa visibilité, ou sa portée : une variable hors de portée (ex : masquée par une autre), existe toujours. |
+---
 
+# Adresse de variable
+
+La mémoire RAM est composée de cellules. Chaque cellule a un numéro, c'est son **adresse**.
+
+La mémoire comporte un grand nombre d'adresses, commençant à l'adresse numéro 0 et se terminant à l'adresse numéro (insérez un très grand nombre ici). Le nombre d'adresses disponibles dépend en fait de la quantité de mémoire dont dispose votre ordinateur.
+
+---
+
+# Valeur de variable
+
+À chaque adresse, on peut stocker un nombre. Un et UN SEUL nombre. On ne peut pas stocker deux nombres par adresse.
+
+Votre mémoire n'est faite que pour stocker des nombres. Elle ne peut stocker ni lettres ni phrases. Pour contourner ce problème, on a inventé une table qui fait la liaison entre les nombres et les lettres. Cette table dit par exemple : « Le nombre 89 représente la lettre Y ». Nous reviendrons dans un prochain chapitre sur la gestion des caractères ; pour l'instant, nous nous concentrons sur le fonctionnement de la mémoire.
+
+---
+
+# Portée de variable
+
+Une portée lexicale est définie par une portion du code source. Au sein de cette portion, l'identifiant n'a qu'une seule liaison.
+
+---
+
+# Portée globale
+
+Un identifiant à portée globale est lié dans l'ensemble du code source (parfois seulement après sa déclaration ou sa définition). Dans de nombreux langages de programmation, toutes les fonctions ont une portée globale (exemple : C).
+
+---
+
+# Portée locale
+
+Un identifiant à portée locale n'est lié qu'au sein d'une construction syntaxique du langage, généralement celle où il est déclaré. Lorsqu'un identifiant à portée locale désigne une variable, on parle alors de variable locale. De plus, dans la plupart des langages, un identifiant à portée locale masque tout éventuel identifiant de même nom, mais de plus grande portée. Déclarer deux fois le même identifiant dans la même portée peut être considéré comme une erreur ou comme une redéclaration, selon le langage et le contexte.
+
+---
+
+# Visibilité de variable
+
+`+`: accès public: Toutes les autres classes ont accès à cet attribut.
+`#`: accès protégé: Seules la classe elle-même et les classes filles (héritage) ont accès à cet attribut.
+`~`: accès package: Classe visible uniquement dans le package.
+`-`: accès privé: Seule la classe elle-même a accès à cet attribut.
+
+---
+
+# Durée de vie de variable
+
+On distingue généralement cinq opérations sur les variables, chacune pouvant revêtir des formes syntaxiques différentes.
+
+- la déclaration permet de déclarer un nom de variable, éventuellement de lui associer un type,
+- la définition permet d'associer une zone mémoire qui va être utilisée pour stocker la variable, comme lorsqu'on lui donne une valeur initiale,
+- l'affectation consiste à attribuer une valeur à une variable,
+- la lecture consiste à utiliser la valeur liée à la variable,
+- la suppression réalisée soit automatiquement soit par une instruction du langage.
+
+Dans les langages de programmation fonctionnelle ou de programmation logique, les variables ne peuvent être associées qu'à une seule valeur au cours de leur existence.
+
+---
+
+Les langages, comme le C, Caml ou Pascal, imposent de déclarer une variable voire de lui donner un type avant son usage. La déclaration imposée des variables permet au compilateur ou à l'interpréteur d'identifier les erreurs typographiques comme des variables non déclarées ou des variables homonymes. D'autres langages effectuent la déclaration au moment de la première affectation (c'est le cas de la plupart des langages de script) ou lors de leur première apparition dans le code (comme dans Prolog).
+
+---
+
+En ce qui concerne l'initialisation des variables, c'est-à-dire l'association d'une première valeur, certains langages imposent d'initialiser une variable avant sa première lecture alors que d'autres fournissent une valeur implicite (spécifiée ou indéterminée). Des langages comme Oz ou Prolog ne réalisent pas à proprement parler d'initialisation. Lors de la déclaration des variables aucune valeur n'est associée, on dit que la variable n'est pas liée. La valeur de la variable est déterminée au fur et à mesure de l'exécution du programme, on parle alors d'unification.
+
+---
+
+# Variables : Résumé
+
+- **nom**: sous quel nom est déclarée la variable
+- **type**: convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits) |
+- **valeur**, la séquence de bits elle-même, ne peut varier dans le cas d'une variable **constante** |
+- **adresse**: l'endroit dans la mémoire où la valeur est stockée |
+- **portée**: portion de code source où elle est accessible |
+- **visibilité**: ensemble de règles fixant qui peut utiliser la variable (exemple : mots-clefs public, private, protected, ou le masquage d'une variable par une autre) |
+- **durée de vie**: temps d'exécution pendant laquelle la variable existe. |
+
+en C et en C++ une variable contenue dans un bloc de code limité par des accolades "{}" possède la durée de vie correspondant au temps d'exécution de ce bloc. Il ne faut pas confondre la durée de vie d'une variable locale et sa visibilité, ou sa portée : une variable hors de portée (ex : masquée par une autre), existe toujours. |
+
+---
+
+# Simplification
+
+Toutefois on peut trouver des langages qui simplifient ces caractéristiques :
+
+- la notion de variable est complétée par la notion de pointeur (variable qui contient une adresse) dans tous les langages qui permettent la création dynamique de variable (new en C++, Java); L'adresse contenu dans la variable pointeur peut être inaccessible au programmeur (PHP, Java), ou directement accessible (C++).
+- le PHP ne possède pas un typage fort, comme une grande partie des langages scripts ;
+- le Prolog ne permet pas qu'une variable change de valeur au cours du temps une fois la première identification faite ;
+- la visibilité de la variable est public par défaut en C ;
+- la notion de pointeur en C++ est remplacée par la notion de référence en Java, en Prolog l'adresse d'une variable n'est pas accessible au programmeur.
+
+Typiquement, le but des langages dits de "scripting" est d'être plus faciles à manipuler pour résoudre des problèmes avec des algorithmes sur mesure.
+
+---
+
+# Structures de contrôles : les conditions
+
+---
 
 ---
 
@@ -509,6 +747,17 @@ http.createServer(function (request, response) {
 ---?image=assets/image/gitpitch-audience.jpg
 
 @title[Download this Template!]
+
+---
+
+### Credits
+
+Remerciements aux créateurs de contenus qui m'ont aidé à faire cette présentation:
+
+- Wikipedia
+- [Cours du MIT sur les algorithmes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
+- [Cours du MIT sur les mathématiques pour l'inforhmatique](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/)
+- [Sam & Max](http://sametmax.com/) pour l'exemple sur les noms de variables
 
 ### Get your presentation started!
 ### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/space)
