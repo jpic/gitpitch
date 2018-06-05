@@ -81,7 +81,6 @@ Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la de
 - Il comporte un éditeur de texte destiné à la programmation, des fonctions qui permettent, de démarrer le compilateur ou l'éditeur de liens ainsi qu'un débogueur en ligne, qui permet d'exécuter ligne par ligne le programme en cours de construction. |
 
 ---
-## Environnement de développement
 
 - Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement. |
 - Les outils qui assistent les développeurs dans toutes les étapes de la réalisation du logiciel: définition, conception, programmation, test et maintenance. |
@@ -101,7 +100,9 @@ Un tel outil permet au programmeur de gagner un temps significatif dans la const
 ---
 ## Environnement de développement: automatisation des tests
 
-- outil pour réaliser automatiquement des tests.
+- outil pour réaliser automatiquement des tests |
+- car le meilleur moyen de vérifier un algorithme complexe est souvent de créer un deuxième algorithme pour testr le premier |
+- a noter la méthode "Test Driven Development" qui fait partie de l'"eXtrem Programing", propose d'écrire carrément un algorithme de validation avant d'écrire l'algorithme lui-même |
 
 ---
 
@@ -113,11 +114,222 @@ Un tel outil permet au programmeur de gagner un temps significatif dans la const
 
 ---
 
+# Principe d'une machine à état
 
+- Un automate fini est une construction mathématique abstraite, |
+- susceptible d'être dans un nombre fini d'états, |
+- mais étant un moment donné dans un seul état à la fois ; |
+- l'état dans lequel il se trouve alors est appelé l'« état courant ». |
+- Le passage d'un état à un autre est activé par un événement ou une condition ; |
+- ce passage est appelé une « transition ».
 
 ---
-# Syntaxe des éléments clés
-## Principe d'une machine à état et universalité de Turing
+
+# Exemples de machines à état
+
+- distributeur automatique de boisson,
+- portillon,
+- ascenseurs,
+- digicodes,
+- citez des machines à état |
+
+---
+
+Un automate particulier est défini par l'ensemble de ses états et l'ensemble de ses transitions.
+
+Vus comme un modèle de calcul les automates finis ont un potentiel faible ; ils ont bien moins de puissance de calcul qu'une machine de Turing. En d'autres termes, il y a des tâches qu'un automate fini ne peut pas accomplir alors qu'un automate à pile ou une machine de Turing le pourront. Ceci est principalement dû au fait qu'un automate fini a une mémoire limitée à son nombre d'états.
+
+---
+
+# Machine de Turing
+
+- En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, tel un ordinateur et sa mémoire.
+- Ce modèle a été imaginé par Alan Turing en 1936, en vue de donner une définition précise au concept d’algorithme ou de « procédure mécanique » |
+- Il est toujours largement utilisé en informatique théorique, en particulier dans les domaines de la complexité algorithmique et de la calculabilité.
+
+---
+
+# Définition
+
+- un alphabet fini,
+- un ruban infini,
+- une tête de lecture/écriture,
+- un ensemble fini d'états,
+- une table d'actions,
+
+---
+
+# Alphabet fini
+
+L'alphabet contient un symbole spécial appelé « symbole blanc » et un ou plusieurs autres symboles.
+On peut toujours encoder un symbole de l'alphabet en une suite de 1 et de 0, par example sur deux bits pour trois caractères:
+
+| A | 00 |
+| B | 01 |
+| C | 11 |
+
+Sur un ruban de 0 et de 1 on peut donc décider d'encoder des symboles d'alphabets de plus grandes tailles. Par exemple, UTF-8 utilise 8 bits par symbole et contient la pluparts des symboles d'alphabets utilisés par les humains. Cela consomme simplement plus d'espace que pour trois caractères.
+
+---
+
+# Ruban infini
+
+Le ruban infini est divisé en cases consécutives.
+Chaque case contient un symbole parmi un alphabet fini.
+Le ruban est supposé être de longueur infinie vers la gauche ou vers la droite
+Donc la machine doit toujours avoir assez de longueur de ruban pour son exécution.
+On considère que les cases non encore écrites du ruban contiennent le symbole « blanc »
+
+---
+
+# Registre d'état
+
+Le registre d'état mémorise l'état courant de la machine de Turing.
+Le nombre d'états possibles est toujours fini, et il existe un état spécial appelé « état de départ » qui est l'état initial de la machine avant son exécution ;
+
+---
+
+# Table d'actions / transitions
+
+La table d'actions indique à la machine:
+
+- quel symbole écrire sur le ruban,
+- dans quel sens déplacer la tête de lecture,
+- quel est le nouvel état,
+
+En fonction:
+
+- de l'état courant de la machine,
+- du symbole lu sur le ruban par la tête de lecture,
+
+Si aucune action n'existe pour une combinaison donnée d'un symbole lu et d'un état courant, la machine s'arrête.
+
+---
+
+# Tête de lecture / écriture
+
+La tête de lecture/écriture peut lire et écrire les symboles sur le ruban, et se déplacer vers la gauche ou vers la droite du ruban.
+
+À chaque étape de son calcul, la machine execute l'action correspondante à son actuel et au symbole lu par la tête de lecture. L'action correspond soit à l'arrêt de la machine, soit à l'écriture d'un symbole sous la tête de lecture, du déplacement de la tête de lecture du coté défini par l'action, et du changement d'état défini par l'action.
+
+---
+
+# Résumé
+
+Quoique son nom de « machine » puisse conduire à croire le contraire, une machine de Turing est un concept abstrait, c'est-à-dire un objet mathématique comportant :
+
+- un ruban infini de symboles de l'alphabet
+- une tête de lecture/écriture qui peut lire et écrire les symboles sur le ruban,
+- et se déplacer vers la gauche ou vers la droite du ruban
+- un registre d'état qui mémorise l'état courant de la machine de Turing
+- une table d'actions qui indique à la machine quel symbole écrire sur le ruban, comment déplacer la tête de lecture (par exemple « G » pour une case vers la gauche, « D » pour une case vers la droite), et quel est le nouvel état, en fonction du symbole lu sur le ruban et de l'état courant de la machine.
+
+Si aucune action n'existe pour une combinaison donnée d'un symbole lu et d'un état courant, la machine s'arrête.
+
+Le nombre d'états possibles est toujours fini, et il existe un état spécial appelé « état de départ » qui est l'état initial de la machine avant son exécution ;
+
+- Le ruban est supposé être de longueur infinie vers la gauche ou vers la droite, en d'autres termes la machine doit toujours avoir assez de longueur de ruban pour son exécution. On considère que les cases non encore écrites du ruban contiennent le symbole « blanc » ;
+
+La machine de Turing lit un ruban et écrit le résultat dessus.
+
+---
+
+# Universalité de Turing
+
+Comme Alan Turing le montre dans son article fondateur, il est possible de créer une machine de Turing qu'on appelle « machine de Turing universelle » et qui est capable de « simuler » le comportement de n'importe quelle autre machine de Turing. « Simuler » signifie que si la machine de Turing universelle reçoit en entrée un codage d'une machine et des données, et produit le même résultat que la machine codée à laquelle on donnerait en entrée les mêmes données.
+
+---
+
+# Turing-complete
+
+Une machine de Turing universelle a potentiellement la capacité de calculer tout ce qui est calculable, on dit alors qu'elle est Turing-complète. En lui fournissant le codage adéquat, elle peut simuler toute fonction récursive, analyser tout langage récursif, et accepter tout langage partiellement décidable. Selon la thèse de Church-Turing, les problèmes résolubles par une machine de Turing universelle sont exactement les problèmes résolubles par un algorithme ou par une méthode concrète de calcul.
+
+---
+
+# Simulation de machine de Turing
+
+Il est assez aisé de simuler une machine de Turing sur un ordinateur moderne, mais il y a une contrainte ! En effet alors que la mémoire d'un ordinateur est finie celle d'une machine de Turing est infinie. Ainsi la machine de Turing n'engendrera pas de débordement mémoire tandis qu'un ordinateur pourra le faire.
+
+On peut observer une machine de turing en python avec debugger.
+
+---
+
+# Les variables : définition
+
+- En mathématiques et en logique, une variable marque un rôle dans une formule, un prédicat ou un algorithme.
+- En physique, en biologie, en mécanique et en chimie, la variable représente un paramètre mesurable comme la température, le temps, la vitesse ou l'intensité.
+- En informatique, une variable est un symbole (habituellement un nom) qui renvoie à une position de mémoire dont le contenu peut prendre successivement différentes valeurs pendant l'exécution d'un programme.
+
+---
+
+# Les variables en informatique
+
+En informatique, les variables sont des symboles qui associent un nom (l'identifiant) à une valeur. La valeur peut être de quelque type de donnée que ce soit. Le nom doit être un identifiant unique (et si le langage en possède, différents des mots-réservés).
+
+---
+
+Dans la plupart des langages et notamment les plus courants, les variables peuvent changer de valeur au cours du temps (dynamique). Dans les langages de certains paradigmes, notamment la programmation fonctionnelle, leur valeur est au contraire figée dans le temps (statique).
+
+---
+
+# Variables et constantes
+
+Dans un langage de programmation, une variable est un espace de stockage pour un résultat. Cependant les possibilités d'une variable sont intimement liées au langage de programmation auquel on fait référence.
+
+Une constante est un symbole associé à une valeur fixe. Syntaxiquement, cet identificateur a tous les aspects d'une variable. Cependant, il lui est affecté une valeur définie, c'est-à-dire constante, comme la taille d'un plateau d'échecs (8x8).
+
+---
+
+# Variables: cycle de vie
+
+Une variable contient une valeur qui peut avoir différent valeurs au cours de différentes exécutions, comme un jeu tel que démineur joué sur un plateau dont le joueur choisit la taille.
+
+Pour chaque constante et variable du programme, l'ordinateur réserve une partie de sa mémoire (RAM), de taille adéquate au type de données.
+
+---
+
+# Variable C++
+
+Par exemple une variable en C++ aura six caractéristiques :
+
+- nom
+- type
+- valeur
+- adresse
+- portée
+- visibilité
+- durée de vie
+
+---
+
+# Nom de variable
+
+Dans certains langages, les noms de variables (comme ceux des identificateurs) doivent nécessairement commencer par une lettre (majuscule ou minuscule) ou par un $. Les autres caractères composant le nom de la variable doivent être une lettre, un chiffre. La différenciation des majuscules et des minuscules (sensibilité à la casse) dans le nom d'une variable dépend du langage considéré.
+
+Exemples de noms de variables valides, en C :
+
+    _var
+    __var2
+    Var
+
+Exemple de nom de variable non valide en C :
+
+    2var
+
+---
+
+# Nom de variable: enjeux
+
+Mieux on choisit les noms de variables
+
+
+- son nom c'est-à-dire sous quel nom est déclarée la variable ; |
+- son type, c'est la convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits) ; |
+- sa valeur, c'est la séquence de bits elle-même, elle ne peut varier au cours du temps si on utilise le mot-clef const ; |
+- son adresse, c'est l'endroit dans la mémoire où elle est stockée ; |
+- sa portée, c'est la portion de code source où elle est accessible, par exemple, la portée d'une variable (non globale) en C s'entend de sa définition à la fin du bloc où elle est définie. |
+- sa visibilité, c'est un ensemble de règles qui fixe qui peut utiliser la variable (exemple : mots-clefs public, private, protected, ou le masquage d'une variable par une autre) ; |
+- sa durée de vie, c'est le temps d'exécution pendant laquelle la variable existe. En C et en C++ une variable contenue dans un bloc de code limité par des accolades "{}" possède la durée de vie correspondant au temps d'exécution de ce bloc. Il ne faut pas confondre la durée de vie d'une variable locale et sa visibilité, ou sa portée : une variable hors de portée (ex : masquée par une autre), existe toujours. |
 
 
 ---
@@ -183,10 +395,10 @@ d'annuaires, puis les huitièmes d'annuaires, etc.) jusqu'à trouver le nom
 cherché.
 
 ---
-### Recherche dichotomique : complexité
 
----?image=assets/image/kyle-gregory-devaras.jpg
+---?image=assets/image/complexite-algorithmique.png
 
+---
 ## Tips!
 
 <br>
