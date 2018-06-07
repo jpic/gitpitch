@@ -1,22 +1,5 @@
 import sys
 
-ruban = [1, 1]
-etat = 'a'  # initial
-actions = [
-    ('a', 0, 'stop'),
-    ('a', 1, 0, 'droite', 'b'),
-    ('b', 1, 1, 'droite', 'b'),
-    ('b', 0, 0, 'droite', 'c'),
-    ('c', 1, 1, 'droite', 'c'),
-    ('c', 0, 1, 'gauche', 'd'),
-    ('d', 1, 1, 'gauche', 'd'),
-    ('d', 0, 0, 'gauche', 'e'),
-    ('e', 1, 1, 'gauche', 'e'),
-    ('e', 0, 1, 'droite', 'a'),
-]
-
-position = 0
-
 def main(etat, ruban, position):
     action = None
     try:
@@ -45,6 +28,22 @@ def main(etat, ruban, position):
         position += 1
 
     return action[4], ruban, position
+
+position = 0
+ruban = [1, 1]
+etat = 'a'  # initial
+actions = [
+    ('a', 0, 'stop'),
+    ('a', 1, 0, 'droite', 'b'),
+    ('b', 1, 1, 'droite', 'b'),
+    ('b', 0, 0, 'droite', 'c'),
+    ('c', 1, 1, 'droite', 'c'),
+    ('c', 0, 1, 'gauche', 'd'),
+    ('d', 1, 1, 'gauche', 'd'),
+    ('d', 0, 0, 'gauche', 'e'),
+    ('e', 1, 1, 'gauche', 'e'),
+    ('e', 0, 1, 'droite', 'a'),
+]
 
 print('etat', etat, 'position', position, 'symbole', ruban[position], 'ruban', ruban)
 while etat != False:
