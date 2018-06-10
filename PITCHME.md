@@ -790,6 +790,402 @@ Affichera:
 2
 1
 ```
+
+---
+
+# Les mécanismes d'erreurs
+
+Note:
+- Dans le contexte des langages de programmation fonctionnels et impératifs, un système de gestion d'exceptions ou SGE permet de gérer les conditions exceptionnelles pendant l'exécution du programme. Lorsqu'une exception se produit, l'exécution normale du programme est interrompue et l'exception est traitée.
+- Les erreurs/exceptions les plus courantes sont probablement l'accès non autorisé à une zone mémoire (erreur de manipulation de pointeur) et la division par zéro (on ne prévoit pas le cas où le diviseur est nul).
+- Tout programme en exécution peut être sujet à des erreurs pour lesquelles des stratégies de détection et de réparation sont possibles. Ces erreurs ne sont pas des bugs mais des conditions particulières (ou conditions exceptionnelles, ou exceptions) dans le déroulement normal d'une partie d'un programme
+- Par exemple, l'absence d'un fichier utile n'est pas un bogue du programme ; par contre, ne pas gérer son absence en provoquerait un.
+
+---
+
+# Types d'erreurs:
+
+- arithmétique (débordement, division par zéro…)
+- collections (débordement d'indices)
+- allocation mémoire (mémoire insuffisante)
+- signaux système (interruption du programme par le système d'exploitation)
+
+Note:
+- Les exceptions suivantes peuvent survenir dans pratiquement tous les programmes
+- Dans certains langages à objets, le type d'une exception doit impérativement être une classe. Une hiérarchie prédéfinie et extensible de types d'exceptions, correspondant au type des erreurs qu'elles représentent, est fournie. D'autres langages, comme C++, autorisent aussi les types primitifs.
+
+---
+
+# Exception arithmétique en Python
+
+```python
+>>> 123/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+```
+
+---
+
+# Gestionnaire d'exceptions
+
+```python
+try:
+    qqchose()
+except UneException:
+    pass
+```
+
+Note:
+- Un gestionnaire d'exception établit un ensemble de routines de traitement d'erreurs, définies par le programmeur, sur un bloc (dans une fonction ou une méthode du programme) ; ces routines sont activées pendant toute la durée d'exécution du bloc protégé.
+- La notion d'exécution du bloc protégé inclut toute la chaîne d'appels (de fonctions, procédures ou méthodes) à partir de ce bloc : on dit que les gestionnaires d'exception sont actifs dans la portée dynamique du bloc.
+Le traitement des situations exceptionnelles fait apparaître deux besoins :
+- une syntaxe spéciale, pour distinguer l'exécution normale du traitement des erreurs,
+- un flot de contrôle « non local », pour traiter et réparer les situations exceptionnelles.
+
+---
+
+# Declenchement d'exception
+
+```python
+def object_get(id):
+    result = Objects.get(id=id)
+    if not result:
+        raise ObjectNotFoundException(id)
+```
+
+Note:
+- Le signalement d'une exception peut être automatique, s'il correspond à une exception définie dans le langage de programmation ou une bibliothèque fournie, ou bien déclenché par le programmeur par l'utilisation d'une primitive de signalement. Il est généralement possible de construire de nouveaux types d'exceptions et de programmer leur signalement.
+- Le gestionnaire d'exception peut être complété par un ensemble de restarts, qui sont des routines permettant la modification des environnements lexicaux entre le site de signalement et le point d'établissement des gestionnaires d'exception. Un restart permet à un gestionnaire d'exception de choisir de réparer et redémarrer un calcul plutôt que de l'abandonner intégralement. Un restart est également actif dans la portée dynamique du bloc sur lequel il est défini.
+
+---
+
+# Procédures
+
+```python
+def direbonjour():
+    print('Bonjour le monde !')
+
+>>> direbonjour()
+Bonjour le monde !
+```
+
+Note:
+- En informatique, une routine est une entité informatique qui encapsule une portion de code (une séquence d'instructions) effectuant un traitement spécifique bien identifié (asservissement, tâche, calcul, etc.) relativement indépendant du reste du programme, et qui peut être réutilisé dans le même programme, ou dans un autre. Dans ce cas, on range souvent la routine dans une bibliothèque pour la rendre disponible à d'autres projets de programmation, tout en préservant l'intégrité de son implémentation.
+- La procédure est Une routine qui ne retourne aucune valeur, réalise une opération (tâche) bien déterminée et dont l'emploi joue le rôle d'une instruction ad-hoc.
+- Vous devez declarer et definir une procedure avant de l'invoquer. Soit en deux temps, soit d'une traite.
+
+---
+
+# Déclaration
+
+```python
+def dire(quoi: str):
+	print(quoi)
+```
+
+- un mot-clé (procedure, function, action, etc.) dans le cas d'une routine dans un langage les distinguant clairement |
+- l'identifiant de la routine (nom donné par le programmeur à la routine) |
+- la description des paramètres indiquant pour chacun (s'il y a des paramètre) |
+  - l'identifiant (nom) du paramètre |
+  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
+- un corps contenant le code réalisant l'opération dévolue à cette routine |
+
+---
+
+# Invocation
+
+```python
+>>> direbonjour()
+Bonjour le monde !
+```
+
+Note:
+Les procédures permettent de diviser un problème en décomposant le programme à réaliser en portions de code plus faciles à produire, à utiliser, à gérer et à entretenir. Les instructions réalisant la routine sont encapsulées à l'intérieur de celle-ci et le programmeur peut faire appel à la routine sans se préoccuper des détails internes à celle-ci ; la routine joue le rôle d'une boite noire dans les routines qui l'emploient.
+
+---
+
+# Paramètres
+
+```python
+def dire(quoi: str):
+	print(quoi)
+
+>>> dire('Bonjour')
+Bonjour
+```
+
+Note:
+- une copie des arguments provenant de la routine appelante est reçue dans les paramètres de la routine appelée (routine invoquée) au lieu de travailler sur les véritables variables de la routine appelante
+- Cependant, les routines demandent souvent l'adresse mémoire des variables de la routine appelante (arguments) plutôt que leurs valeurs: quoi n'est pas une copie de la chaine mais un pointeur vers la chaine de caracteres definies dans la routine appelante
+- Le corps de la routine comprend :
+  - la définition des variables locales à la routine, certaines de ces variables n'existant que le temps de son exécution;
+  - la séquence des instructions à exécuter.
+
+---
+
+# Valeurs de retour
+
+```python
+def ajouterun(nombre: int):
+    resultat = nombre + 1
+    return resultat
+```
+
+Note:
+- Une fonction peut renvoyer un seul résultat par sa valeur de retour. Ce résultat peut, entre autres, être :
+  - de grande taille, comme une chaîne de caractères en PL/I ou une structure en C ;
+  - une adresse en mémoire ;
+  - un simple code d'erreur (en) (par exemple 0 si l'opération s'est bien terminé).
+
+---
+
+# Callbacks
+
+```python
+def ajouterunetappeler(nombre, callback):
+    resultat = nombre + 1
+    callback(resultat)
+
+def afficherresultat(resultat):
+    print(resultat)
+
+ajouterunetappeler(3, afficherresultat)
+```
+
+Note:
+- En informatique, une fonction de rappel (callback en anglais) ou fonction de post-traitement est une fonction qui est passée en argument à une autre fonction. Cette dernière peut alors faire usage de cette fonction de rappel comme de n'importe quelle autre fonction, alors qu'elle ne la connaît pas par avance.
+- La technique de la fonction de rappel s'inspire du principe d'Hollywood (ou Inversion de contrôle) où l'appelant laisse ses coordonnées pour pouvoir être rappelé par la suite. L'intérêt est le passage à un modèle événementiel et modulaire.
+
+---
+
+# Pointeurs de fonction
+
+```c
+int addInt(int n, int m) {
+    return n+m;
+}
+
+int (*functionPtr)(int,int);
+
+functionPtr = &addInt;
+
+int sum = (*functionPtr)(2, 3); // sum == 5
+
+int add2to3(int (*functionPtr)(int, int)) {
+    return (*functionPtr)(2, 3);
+}
+```
+
+@[1-3](Declaration d'une fonction basique vers laquelle nous allons pointer)
+@[5](Definir un pointer de fonction qui prend 2 entiers en entree et en retourne 1 en sortie)
+@[7](Maintenant nous pouvons pointer vers notre fonction)
+@[9](Et utiliser le pointer pour appeler la fonction)
+@[11-13](On peut passer le pointer a une autre fonction pour faire la meme chose)
+
+Note:
+- Les callbacks ont été très utilisées en programmation système et notamment en langage C. En effet, le C a permis assez tôt de passer des pointeurs de fonctions en paramètre d'autres fonctions. Cela le rendait techniquement capable d'implanter le mécanisme des fonctions de rappel.
+- Le passage de fonction en paramètre est généralisé en programmation fonctionnelle. Toutefois dans ce cadre, on ne parle plus de fonction de rappel. Dans ce paradigme, les fonctions sont des éléments de première classe (au même titre que les constantes par exemple). Aussi, les fonctions qui peuvent prendre d'autres fonctions en argument et/ou renvoyer une fonction comme valeur de retour sont alors qualifiées de fonctions d'ordre supérieur.
+
+---
+
+# Délégués
+
+```c#
+public delegate void Del(string message);
+
+public static void DelegateMethod(string message)
+{
+    System.Console.WriteLine(message);
+}
+
+Del handler = DelegateMethod;
+
+handler("Hello World");
+```
+
+@[1](Definition du delegate, tout appel du delegate sera passé a la fonction deleguee de cette fonction)
+@[3-6](Declaration et definition d'une fonction pour le deleguée)
+@[8](Instanciation du délégué)
+@[10](Appel du délégué)
+
+Note:
+- Le délégué est une methode d'objet avec eventuellement un objet attaché.
+
+---
+
+### Fonctions
+
+Comme la procedure:
+
+- un mot-clé (procedure, function, action, etc.) |
+- l'identifiant de la routine (nom donné par le programmeur à la routine) |
+- la description des paramètres indiquant pour chacun (s'il y a des paramètre) |
+  - l'identifiant (nom) du paramètre |
+  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
+- un corps contenant le code réalisant l'opération dévolue à cette routine |
+
+Dans le cas d'une fonction, la déclaration d'une routine comporte aussi : |
+
+- le type de la routine (dans le cas d'une fonction d'un langage typé), c'est-à-dire le type de sa valeur de retour |
+- l'affectation, dans le corps de la routine, d'un résultat à sa valeur de retour |
+
+Note:
+- Une routine qui retourne une et une seule valeur, conformément à la définition mathématique de fonction.
+- Contrairement a la procédure qui ne retourne rien
+- la fonction est aussi une procédure
+
+---
+
+# Clotures
+
+```python
+def ajouteur(nombre):
+    return lambda valeur: valeur + nombre
+
+ajoute10 = ajouteur(10)
+ajoute10(1)
+```
+
+Note:
+- Une fermeture peut être passée en argument d'une fonction dans l'environnement où elle a été créée (passée vers le bas) ou renvoyée comme valeur de retour (passée vers le haut). Dans ce cas, le problème posé alors par la fermeture est qu'elle fait référence à des données qui auraient typiquement été allouées sur la pile d'exécution et libérées à la sortie de l'environnement. Hors optimisations par le compilateur, le problème est généralement résolu par une allocation sur le tas de l'environnement.
+
+---
+
+```python
+def f():
+    x = 0
+
+    def g():
+        nonlocal x
+        x += 1
+        return x
+
+    return g
+
+g = f()
+g()
+g()
+g()
+```
+
+@[1](Definition de fonction)
+@[2](Definition de variable locale)
+@[4](Definition de cloture)
+@[5](Le mot-clé nonlocal permet de modifier les variables non locales au lieu de les masquer par des variables locales)
+@[6](Modification de variable de l'environnement lexical parent)
+@[7](Retourner la variable)
+@[9](Retourner la cloture)
+@[11](Appeler la fonction retourne la cloture)
+@[12](Retourne 1)
+@[13](Retourne 2)
+@[14](Retourne 3)
+
+Note:
+- Dans un langage de programmation, une fermeture ou clôture (en anglais : closure) est une fonction accompagnée de son environnement lexical. L'environnement lexical d'une fonction est l'ensemble des variables non locales qu'elle a capturé, soit par valeur (c'est-à-dire par copie des valeurs des variables), soit par référence (c'est-à-dire par copie des adresses mémoires des variables)1. Une fermeture est donc créée, entre autres, lorsqu'une fonction est définie dans le corps d'une autre fonction et utilise des paramètres ou des variables locales de cette dernière.
+
+---
+
+### Programation lambda
+
+```c
+int n = 2;
+int inc(int k) { /* incrémentation par effet de bord */
+  n = n + k;
+  return n;
+}
+f(inc(1) + inc(1));
+```
+
+Note:
+- La programmation fonctionnelle est un paradigme de programmation de type déclaratif qui considère le calcul en tant qu'évaluation de fonctions mathématiques.
+- Comme le changement d'état et la mutation des données ne peuvent pas être représentés par des évaluations de fonctions1 la programmation fonctionnelle ne les admet pas, au contraire elle met en avant l'application des fonctions, contrairement au modèle de programmation impérative qui met en avant les changements d'état2.
+- Un langage fonctionnel est donc un langage de programmation dont la syntaxe et les caractéristiques encouragent la programmation fonctionnelle. Alors que l'origine de la programmation fonctionnelle peut être trouvée dans le lambda-calcul
+
+---
+
+### Programation lambda: langages
+
+- 1958: Lisp |
+- 1975: Scheme |
+- 1973: ML |
+- 1984: Common Lisp |
+- 1987: Haskell, Erlang, OCaml |
+- 2002: F# |
+- 2003: Scala |
+
+---
+
+## Programmation Orientée Objet
+
+- 1960: Ole-Johan Dahl et Kristen Nygaard |
+- 1970: Alan Kay |
+
+Note:
+- un paradigme de programmation informatique elabore par les norvegiens et l'americain aussi
+- Il consiste en la définition et l'interaction de briques logicielles appelées objets ; un objet représente un concept, une idée ou toute entité du monde physique, comme une voiture, une personne ou encore une page d'un livre. Il possède une structure interne et un comportement, et il sait interagir avec ses pairs.
+- Il s'agit donc de représenter ces objets et leurs relations ; l'interaction entre les objets via leurs relations permet de concevoir et réaliser les fonctionnalités attendues, de mieux résoudre le ou les problèmes. Dès lors, l'étape de modélisation revêt une importance majeure et nécessaire pour la POO. C'est elle qui permet de transcrire les éléments du réel sous forme virtuelle.
+
+---
+
+## Example
+
+```python
+class Personne:
+    def __init__(self, name):
+        self.name = name
+
+    def ditbonjour(self):
+        print('Bonjour! Je suis {}'.format(self.name))
+
+papi = Personne('papi')
+print(papi.name)
+papi.ditbonjour()
+Personne('mamie').ditbonjour()
+```
+
+@[1](Définition avec mot clef et nom de classe)
+@[2-3](Définition du constructeur)
+@[5-6](Définition d'une méthode de classe)
+@[8](Instanciation d'un objet Personne, definition d'une variable papi)
+@[9](Affiche 'papi', l'attribut name de l'objet Personne de la variable papi)
+@[10](Invoque la methode ditbonjour de l'objet, affiche 'papi')
+@[11](Instancie une personne avec name='mamie' et appelle la method ditbonjour())
+
+---
+
+### Exercice manuel: algorithme d'affichage de table de multiplications
+
+
+
+---
+
+### Algor
+
+- variable n: nombre reel
+- tantque(1 < n < 100)
+  - ecrire('Donner un nombre entre 1 et 100')
+  - lire(n)
+  - si n < 1:
+    - ecrire('plus grand svp')
+  - sinonsi n > 100
+    - ecrire('plus petit svp')
+
+---
+
+## Multiplication et tours de Hanoï
+
+- on ne peut déplacer plus d'un disque à la fois |
+- on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide. |
+
+Les tours de Hanoï (originellement, la tour d'Hanoïa) sont un jeu de réflexion imaginé par le mathématicien français Édouard Lucas, et consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups, tout en respectant les règles suivantes :
+
+
+
+On suppose que cette dernière règle est également respectée dans la configuration de départ
+
+---?code=sample/go/server.go&lang=golang&title=Golang File
+
 ---
 
 ### Heuristiques
