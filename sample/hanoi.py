@@ -9,5 +9,4 @@ def deplacer_tour(hauteur, tour_source, tour_destination, tour_intermediaire):
         deplacer_tour(hauteur - 1, tour_intermediaire, tour_destination, tour_source)
 
 
-import ipdb; ipdb.set_trace()
 deplacer_tour(3, 'A', 'B', 'C')

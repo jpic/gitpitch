@@ -1154,35 +1154,59 @@ Personne('mamie').ditbonjour()
 
 ---
 
-### Exercice manuel: algorithme d'affichage de table de multiplications
+# Multiplication
+
+         23958233
+   ×         5830
+   ———————————————
+         00000000 ( =      23,958,233 ×     0)
+        71874699  ( =      23,958,233 ×    30)
+      191665864   ( =      23,958,233 ×   800)
+   + 119791165    ( =      23,958,233 × 5,000)
+   ———————————————
+     139676498390 ( = 139,676,498,390        )
 
 
-
----
-
-### Algor
-
-- variable n: nombre reel
-- tantque(1 < n < 100)
-  - ecrire('Donner un nombre entre 1 et 100')
-  - lire(n)
-  - si n < 1:
-    - ecrire('plus grand svp')
-  - sinonsi n > 100
-    - ecrire('plus petit svp')
+---?code=sample/multiplication.js&lang=javascrip&title=Algorithme de multiplication
 
 ---
 
-## Multiplication et tours de Hanoï
+# Tours de Hanoï
+
+![Glider](assets/image/hanoi.png)
 
 - on ne peut déplacer plus d'un disque à la fois |
 - on ne peut placer un disque que sur un autre disque plus grand que lui ou sur un emplacement vide. |
 
+Note:
 Les tours de Hanoï (originellement, la tour d'Hanoïa) sont un jeu de réflexion imaginé par le mathématicien français Édouard Lucas, et consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups, tout en respectant les règles suivantes :
+OOOO On suppose que cette dernière règle est également respectée dans la configuration de départ
+
+---
+
+![Hanoï animation](assets/image/hanoi.gif)
+
+---
+
+---?code=sample/hanoi.py&lang=python&title=PyHanoï
+
+---
+
+```
+Deplacer disque de A a B
+Deplacer disque de A a C
+Deplacer disque de B a C
+Deplacer disque de A a B
+Deplacer disque de C a A
+Deplacer disque de C a B
+Deplacer disque de A a B
+```
+
+---
 
 
 
-On suppose que cette dernière règle est également respectée dans la configuration de départ
+---
 
 ---?code=sample/go/server.go&lang=golang&title=Golang File
 
@@ -1381,4 +1405,4 @@ Remerciements aux créateurs de contenus qui m'ont aidé à faire cette présent
 # Formation Algorithmique
 
 ### Introduction
----
+
