@@ -5,6 +5,12 @@
  * https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS
  */
 
+/* test */
+h2 {
+    color: red;
+}
+/* test */
+
 .reveal pre {
   width: 100%;
 }
