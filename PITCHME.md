@@ -1156,6 +1156,7 @@ Personne('mamie').ditbonjour()
 
 # Multiplication
 
+```
          23958233
    ×         5830
    ———————————————
@@ -1165,9 +1166,10 @@ Personne('mamie').ditbonjour()
    + 119791165    ( =      23,958,233 × 5,000)
    ———————————————
      139676498390 ( = 139,676,498,390        )
+```
 
 
----?code=sample/multiplication.js&lang=javascrip&title=Algorithme de multiplication
+---?code=sample/multiplication.js&lang=javascript&title=Algorithme de multiplication
 
 ---
 
@@ -1180,15 +1182,15 @@ Personne('mamie').ditbonjour()
 
 Note:
 Les tours de Hanoï (originellement, la tour d'Hanoïa) sont un jeu de réflexion imaginé par le mathématicien français Édouard Lucas, et consistant à déplacer des disques de diamètres différents d'une tour de « départ » à une tour d'« arrivée » en passant par une tour « intermédiaire », et ceci en un minimum de coups, tout en respectant les règles suivantes :
-OOOO On suppose que cette dernière règle est également respectée dans la configuration de départ
 
 ---
 
 ![Hanoï animation](assets/image/hanoi.gif)
 
----
+Note:
+On suppose que cette dernière règle est également respectée dans la configuration de départ
 
----?code=sample/hanoi.py&lang=python&title=PyHanoï
+---?code=sample/hanoi.py&lang=python&title=PyHano
 
 ---
 
@@ -1204,11 +1206,304 @@ Deplacer disque de A a B
 
 ---
 
+### Solutions de représentations graphiques, aide à la réflexion
 
+![Umbrello](assets/image/umbrello.png)
 
 ---
 
----?code=sample/go/server.go&lang=golang&title=Golang File
+# Méthode Booch
+
+Note:
+- La méthode Booch1 est une méthode de développement de logiciels pour la programmation orientée objet. Elle a été conçue par Grady Booch qui l'a publiée en 1992 puis révisée en 19941. Elle se compose d'un langage de modélisation graphique2, d'un processus itératif de développement3, et d'un ensemble de pratiques recommandées4.
+- Booch est, avec OMT et OOSE, l'une des méthodes d'analyse et de conception orientées objet à l'origine d'UML, Grady Booch, étant l'un des pères du langage UML avec Ivar Jacobson, fondateur de la méthode OOSE et James Rumbaugh, fondateur de la méthode OMT.
+- UML 0.8 inclut OOD/Booch '93 de Grady Booch et OMT de Jim Rumbaugh en 1995
+
+---
+
+# Méthode Booch: Diagrammes
+
+| Modèle 	| Type 		| Diagramme 			|
+|-----------|-----------|-----------------------|
+| Logique 	| Statique 	| Diagramme de classes |
+| 			| 			| Diagramme d'objets |
+| 			| Dynamique | Diagramme de transition d'états |
+| 			| 			| Diagramme d'interaction |
+| Physique  | Statique  | Diagramme de modules |
+| 			| 			| Diagramme de processus |
+
+Note:
+- La notation de Booch se caractérise par des formes en nuage pour représenter objets et classes. Elle distingue les diagrammes suivants
+
+---
+
+# Méthode Booch: Macro Processus
+
+- conceptualisation |
+- analyse |
+- conception |
+- évolution |
+- maintenance |
+
+Note:
+Le processus de développement distingue un macro-processus et un-micro processus.
+Le macro-processus identifie le cycle d'activité suivant:
+- Conceptualisation : détermination des besoins principaux
+- Analyse : développement d'un modèle comportemental
+- Conception : création d'une architecture pour la mise en œuvre
+- Évolution: raffinements successifs de l'architecture jusqu'à obtenir le système voulu
+- Maintenance : évolution après la mise en service
+
+---
+
+# Méthode Booch: Micro Processus
+
+- Identification des classes et objets |
+- Identification de leur sémantique |
+- Identification des relations entre classes et objets |
+- Mise en œuvre |
+
+Note:
+Le micro-processus s'applique aux nouvelles classes, structures et comportements identifiés au cours du macro-processus, avec le cycle suivant
+
+---
+
+# OMT
+
+![Diagramme d'objets OMT](assets/image/omt.object.png)
+
+Note:
+- OMT (en anglais « object modeling technique », c'est-à-dire « technique de modélisation objet ») est une technique de modélisation destinée à la conception et la modélisation pour la programmation orientée objet. Elle a été conçue en 1991 par James Rumbaugh, Michael Blaha, William Lorensen, Frederick Eddy et William Premerlani.
+- Cette technique de représentation graphique fusionnera avec celle de la méthode Booch de Grady Booch, ainsi que celle de OOSE d'Ivar Jacobson pour donner naissance à UML en novembre 19972.
+- La notation des diagrammes de classe d'OMT était très populaire, et a ainsi été utilisée dans des ouvrages de référence publiés avant UML, comme « Design Patterns ». Les concepts de base y étaient la classe, l'instance et l'objet ainsi que l'attribut et la méthode.
+
+---
+
+### OOSE
+
+Note:
+- Object Oriented Software Engineering (OOSE) est un langage de modélisation objet créé par Ivar Jacobson.
+- OOSE est une méthode pour l’analyse initiale des usages de logiciels, basée sur les « cas d’utilisation » et le cycle de vie des logiciels.
+- Ce langage fut fusionné avec OMT de James Rumbaugh et OOD de Grady Booch pour créer l’UML en 1995.
+
+---
+
+### OOSE: Modèles
+
+- modèle des besoins |
+- modèle d’analyse |
+- modèle de conception |
+- modèle d’implémentation |
+- modèle de test |
+
+Note:
+La méthode OOSE est basée sur cinq modèles et trois types d’objets fondés par Ivar Jacobson en 1992:
+- le modèle des besoins est un modèle qui se situe au niveau de l’interaction entre l’individu et l’environnement
+- le modèle d’analyse permet de définir les différentes relations entre les objets, les acteurs et le système
+- le modèle de conception permet de modéliser ces relations à travers différents diagrammes
+- le modèle d’implémentation permet le passage au code
+- le modèle de test basé sur les essais d’actions et d’interactions du système
+
+---
+
+### OOSE: Objets
+
+- entités |
+- contrôles |
+- interfaces |
+
+Note:
+Les trois types d’objets sont :
+- les entités représentant un objet matériel ou immatériel ;
+- des contrôles permettant différentes vérifications ;
+- des interfaces représentant des classes abstraites, sans attribut et dont les méthodes sont abstraites et publiques.
+
+---
+
+### OOSE: La démarche
+
+- cas d’utilisations |
+- modèle d’analyse objet |
+- modèle de conception objet |
+- modèle d’interaction pour chaque cas d’utilisation |
+- modèle d’interaction |
+- diagrammes d’états/transition pour chaque cycle de vie d’objets |
+
+Note:
+- Définir les cas d’utilisations : ce diagramme permet de décrire les exigences fonctionnelles du système et déterminer ses frontières et ses relations avec son environnement. Il intègre des acteurs externes au système (primaires ou secondaires) et les actions permises par le système.
+- Créer un modèle d’analyse objet : il décrit les entités et leurs relations en terme objet. Les entités représentent des classes.
+- Créer un modèle de conception objet : Il fait intervenir les étapes conception des classes, des associations, des attributs et la validation du modèle.
+- Créer un modèle d’interaction pour chaque cas d’utilisation : Il représente les échanges de messages entre objets du système, dans le cas d’un fonctionnement particuliers (scénario) du système. Ce modèle est composé de diagrammes de séquences, de communications et de temps.
+- Créer un diagramme d’états/transition pour chaque cycle de vie d’objets : Il découpe un objet en un ensemble d’états, le passage d’un état à un autre s’effectue par des événements. Un événement est constitué d’attributs et de gardien, un attribut est un paramètre et un gardien est une condition de transitions.
+
+---
+
+# UML
+
+Note:
+- Le Langage de Modélisation Unifié, de l'anglais Unified Modeling Language (UML), est un langage de modélisation graphique à base de pictogrammes conçu pour fournir une méthode normalisée pour visualiser la conception d'un système. Il est couramment utilisé en développement logiciel et en conception orientée objet.
+- L'UML est le résultat de la fusion de précédents langages de modélisation objet : Booch, OMT, OOSE. Principalement issu des travaux de Grady Booch, James Rumbaugh et Ivar Jacobson, UML est à présent un standard adopté par l'Object Management Group (OMG).
+- UML est utilisé pour spécifier, visualiser, modifier et construire les documents nécessaires au bon développement d'un logiciel orienté objet. UML offre un standard de modélisation, pour représenter l'architecture logicielle.
+- Grâce aux outils de modélisation UML, il est également possible de générer automatiquement tout ou partie du code d'une application logicielle, par exemple en langage Java, à partir des divers documents réalisés.
+
+---
+
+### UML: objets représentables
+
+- Activité d'un objet/logiciel |
+- Acteurs |
+- Processus |
+- Schéma de base de données |
+- Composants logiciels |
+- Réutilisation de composants |
+
+---
+
+### UML: Formalisme
+
+- les vues |
+- les diagrammes |
+- les modèles d'élément |
+
+Note:
+UML 2.3 propose 14 types de diagrammes (25 en UML 1.3). UML n'étant pas une méthode, leur utilisation est laissée à l'appréciation de chacun, même si le diagramme de classes est généralement considéré comme l'élément central d'UML ; des méthodologies, telles que l'UnifiedProcess, axent l'analyse en tout premier lieu sur les diagrammes de cas d'utilisation (use case). De même, on peut se contenter de modéliser seulement partiellement un système, par exemple certaines parties critiques.
+UML se décompose en plusieurs parties:
+- Les vues : ce sont les observables du système. Elles décrivent le système d'un point de vue donné, qui peut être organisationnel, dynamique, temporel, architectural, géographique, logique, etc. En combinant toutes ces vues, il est possible de définir (ou retrouver) le système complet.
+- Les diagrammes : ce sont des ensembles d'éléments graphiques. Ils décrivent le contenu des vues, qui sont des notions abstraites. Ils peuvent faire partie de plusieurs vues.
+- Les modèles d'élément : ce sont les éléments graphiques des diagrammes.
+
+---
+
+### UML: Vues
+
+![UML: Vues](assets/image/uml.vues.png)
+
+Note:
+Une façon de mettre en œuvre UML est de considérer différentes vues qui peuvent se superposer pour collaborer à la définition du système :
+- Vue des cas d'utilisation (use-case view) : c'est la description du modèle vu par les acteurs du système. Elle correspond aux besoins attendus par chaque acteur (c'est le quoi et le qui).
+- Vue logique (logical view): c'est la définition du système vu de l'intérieur. Elle explique comment peuvent être satisfaits les besoins des acteurs (c'est le comment).
+- Vue d'implémentation (implementation view) : cette vue définit les dépendances entre les modules.
+- Vue des processus  (process view) : c'est la vue temporelle et technique, qui met en œuvre les notions de tâches concurrentes, stimuli, contrôle, synchronisation…
+- Vue de déploiement (deployment view) : cette vue décrit la position géographique et l'architecture physique de chaque élément du système (c'est le où).
+Le pourquoi n'est pas défini dans UML.
+
+---
+
+### UML: Diagrammes de structure ou diagrammes statiques
+
+- Diagramme de classes (class diagram) |
+- Diagramme d'objets (object diagram) |
+- Diagramme de composants (component diagram) |
+- Diagramme de déploiement (deployment diagram) |
+- Diagramme des paquets (package diagram) |
+- Diagramme de structure composite (composite structure diagram) |
+- Diagramme de profils (profile diagram) |
+
+Note:
+Les diagrammes sont dépendants hiérarchiquement et se complètent, de façon à permettre la modélisation d'un projet tout au long de son cycle de vie. Il en existe quatorze depuis UML 2.3.
+- Diagramme de classes (class diagram) : représentation des classes intervenant dans le système.
+- Diagramme d'objets (object diagram) : représentation des instances de classes (objets) utilisées dans le système.
+- Diagramme de composants (component diagram) : représentation des composants du système d'un point de vue physique, tels qu'ils sont mis en œuvre (fichiers, bibliothèques, bases de données…)
+- Diagramme de déploiement (deployment diagram) : représentation des éléments matériels (ordinateurs, périphériques, réseaux, systèmes de stockage…) et la manière dont les composants du système sont répartis sur ces éléments matériels et interagissent entre eux.
+- Diagramme des paquets (package diagram) : représentation des dépendances entre les paquets (un paquet étant un conteneur logique permettant de regrouper et d'organiser les éléments dans le modèle UML), c'est-à-dire entre les ensembles de définitions.
+- Diagramme de structure composite (composite structure diagram) : représentation sous forme de boîte blanche les relations entre composants d'une classe (depuis UML 2.x).
+- Diagramme de profils (profile diagram) : spécialisation et personnalisation pour un domaine particulier d'un meta-modèle de référence d'UML (depuis UML 2.2).
+
+---
+
+### UML: Diagramme de classes
+
+![UML: Diagramme de classes](assets/image/UML.classes.png)
+
+Note:
+- Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que les différentes relations entre celles-ci. Ce diagramme fait partie de la partie statique d'UML car il fait abstraction des aspects temporels et dynamiques.
+- Une classe décrit les responsabilités, le comportement et le type d'un ensemble d'objets. Les éléments de cet ensemble sont les instances de la classe.
+- Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensemble par un champ sémantique. Les classes sont utilisées dans la programmation orientée objet. Elles permettent de modéliser un programme et ainsi de découper une tâche complexe en plusieurs petits travaux simples.
+- Les classes peuvent être liées entre elles grâce au mécanisme d'héritage qui permet de mettre en évidence des relations de parenté. D'autres relations sont possibles entre des classes, chacune de ces relations est représentée par un arc spécifique dans le diagramme de classes.
+- Elles sont finalement instanciées pour créer des objets (une classe est un moule à objet : elle décrit les caractéristiques des objets, les objets contiennent leurs valeurs propres pour chacune de ces caractéristiques lorsqu'ils sont instanciés).
+
+---
+
+### UML: Schéma d'une classe
+
+![UML: classe](assets/image/UML.classe.png)
+![UML: classe](assets/image/UML.classe.abstraite.png)
+![UML: classe](assets/image/UML.classe.template.png)
+
+Note:
+Une classe est représentée par un rectangle séparé en trois parties :
+- la première partie contient le nom de la classe
+- la seconde contient les attributs de la classe
+- la dernière contient les méthodes de la classe
+La seconde et la dernière représentent le comportement de la classe.
+- Première partie : le nom de la classe
+  - Il est écrit dans le rectangle du haut.
+  - Dans une classe classique, le nom est écrit en romain (exemple : « ClasseClassique »).
+  - Le nom des classes abstraites est écrit en italique (exemple : « ClasseAbstraite »).
+  - Les classes template ont, dans leur angle supérieur droit, un rectangle dont la bordure est en pointillé et qui contient les types des paramètres.
+Seconde partie : les attributs
+
+---
+
+### UML: Diagrammes de comportement
+
+- Diagramme des cas d'utilisation (use-case diagram) |
+- Diagramme états-transitions (state machine diagram) |
+- Diagramme d'activité (activity diagram) |
+
+Note:
+Les diagrammes de comportement (behavior diagrams) rassemblent :
+- Diagramme des cas d'utilisation (use-case diagram) : représentation des possibilités d'interaction entre le système et les acteurs (intervenants extérieurs au système), c'est-à-dire de toutes les fonctionnalités que doit fournir le système.
+- Diagramme états-transitions (state machine diagram) : représentation sous forme de machine à états finis le comportement du système ou de ses composants.
+- Diagramme d'activité (activity diagram) : représentation sous forme de flux ou d'enchaînement d'activités le comportement du système ou de ses composants.
+
+---
+
+### UML: Pacquetages
+
+![UML](assets/image/uml.paquetages.png)
+
+---
+
+### UML: Déploiement
+
+![UML: Déploiement](assets/image/uml.deploiement.png)
+
+---
+
+# Series de condition et systèmes experts
+
+- une base de faits |
+- une base de règles |
+- un moteur d'inférence |
+
+Note:
+- Un système expert est un outil capable de reproduire les mécanismes cognitifs d'un expert, dans un domaine particulier. Il s'agit de l'une des voies tentant d'aboutir à l'intelligence artificielle. Plus précisément, un système expert est un logiciel capable de répondre à des questions, en effectuant un raisonnement à partir de faits et de règles connues. Il peut servir notamment comme outil d'aide à la décision.
+Un système expert se compose de 3 parties :
+- Le moteur d'inférence est capable d'utiliser faits et règles pour produire de nouveaux faits, jusqu'à parvenir à la réponse à la question experte posée.
+- La plupart des systèmes experts existants reposent sur des mécanismes de logique formelle (logique aristotélicienne) et utilisent le raisonnement déductif. Pour l'essentiel, ils utilisent la règle d'inférence suivante (syllogisme) :
+- si P est vrai (fait ou prémisse) et si on sait que P implique Q (règle) alors, Q est vrai (nouveau fait ou conclusion).
+
+---?image=assets/image/akinator/0.png
+---?image=assets/image/akinator/1.png
+---?image=assets/image/akinator/3.png
+---?image=assets/image/akinator/4.png
+---?image=assets/image/akinator/5.png
+---?image=assets/image/akinator/6.png
+---?image=assets/image/akinator/7.png
+---?image=assets/image/akinator/8.png
+---?image=assets/image/akinator/9.png
+---?image=assets/image/akinator/10.png
+---?image=assets/image/akinator/11.png
+---?image=assets/image/akinator/12.png
+---?image=assets/image/akinator/13.png
+---?image=assets/image/akinator/14.png
+---?image=assets/image/akinator/15.png
+---?image=assets/image/akinator/16.png
+---?image=assets/image/akinator/17.png
+---?image=assets/image/akinator/18.png
+---?image=assets/image/akinator/19.png
+---?image=assets/image/akinator/20.png
 
 ---
 
@@ -1406,3 +1701,7 @@ Remerciements aux créateurs de contenus qui m'ont aidé à faire cette présent
 
 ### Introduction
 
+
+---?image=assets/image/gitpitch-audience.jpg
+
+Merci
