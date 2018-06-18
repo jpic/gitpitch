@@ -4,6 +4,11 @@
 
 ### Formation
 
+
+---
+
+# Introduction
+
 ---
 ## Principes généraux
 
@@ -27,7 +32,7 @@ Conclusion: un algorithme ne fait pas forcemment peur.
 
 ---
 
-# L'algorithmique
+# Histoire
 
 Note:
 - L'algorithmique est l'étude et la production de règles et techniques qui sont impliquées dans la définition et la conception d'algorithmes,
@@ -124,7 +129,15 @@ Note:
 
 ---
 
-### Environnement de développement
+## Environnements de développement
+- Assiste le developpeur de maniere generale
+- pour programmer plus efficacement
+- aide l'analyse
+- et l'execution du code
+
+---
+
+### Editeur de code: GUI
 
 ![vscode](assets/image/vscode.png)
 
@@ -144,7 +157,7 @@ Note:
 - Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation
 
 ---
-### Editeur de code
+### Editeur de code: console
 
 ![vim](assets/image/vim.png)
 
@@ -172,6 +185,15 @@ Note:
 
 ---
 
+# Theorie: Machine à état
+
+Note:
+Interet:
+ - Une machine a etat modelise un ordinateur de maniere theorique
+ - developper
+
+---
+
 ## Principe d'une machine à état
 
 - Un automate fini est une construction mathématique abstraite, |
@@ -185,7 +207,7 @@ Note:
 
 ---
 
-# Exemples de machines à état
+## Exemples de machines à état
 
 - distributeur automatique de boisson,
 - portillon,
@@ -204,7 +226,14 @@ Vus comme un modèle de calcul les automates finis ont un potentiel faible ; ils
 
 ---
 
-### Machine de Turing
+## Machine de Turing
+
+---
+
+
+---
+
+### Machine de Turing: What?
 
 - un alphabet fini,
 - un ruban infini,
@@ -220,7 +249,7 @@ Note:
 
 ---
 
-# Alphabet fini
+###  Alphabet fini
 
 | A | 00 |
 | - | -- |
@@ -234,7 +263,7 @@ Sur un ruban de 0 et de 1 on peut donc décider d'encoder des symboles d'alphabe
 
 ---
 
-# Ruban infini
+### Ruban infini
 
 | 00 |
 | -- |
@@ -252,7 +281,7 @@ On considère que les cases non encore écrites du ruban contiennent le symbole 
 
 ---
 
-# Registre d'état
+### Registre d'état
 
 Note:
 Le registre d'état mémorise l'état courant de la machine de Turing.
@@ -260,7 +289,7 @@ Le nombre d'états possibles est toujours fini, et il existe un état spécial a
 
 ---
 
-### Table d'actions / transitions
+#### Table d'actions / transitions
 
 La table d'actions indique à la machine:
 
@@ -275,7 +304,7 @@ En fonction:
 
 ---
 
-# Tête de lecture / écriture
+### Tête de lecture / écriture
 
 Note:
 La tête de lecture/écriture peut lire et écrire les symboles sur le ruban, et se déplacer vers la gauche ou vers la droite du ruban.
@@ -304,7 +333,9 @@ Si aucune action n'existe pour une combinaison donnée d'un symbole lu et d'un �
 
 ---
 
-### La machine de Turing lit un ruban et écrit le résultat dessus.
+### Conclusion
+
+La machine de Turing lit un ruban et écrit le résultat dessus.
 
 Note:
 Le ruban est supposé être de longueur infinie vers la gauche ou vers la droite, en d'autres termes la machine doit toujours avoir assez de longueur de ruban pour son exécution. On considère que les cases non encore écrites du ruban contiennent le symbole « blanc »
@@ -357,7 +388,11 @@ Il est assez aisé de simuler une machine de Turing sur un ordinateur moderne, m
 
 ---
 
-# Les variables : définition
+# Variables
+
+---
+
+## Définition
 
 - mathématiques
 - physique |
@@ -368,7 +403,7 @@ Note:
 
 ---
 
-# Variables en informatique
+## Variables en informatique
 
 ```python
 hello = 'world'
@@ -394,7 +429,7 @@ Par exemple une variable en C++ aura six caractéristiques :
 
 ---
 
-### Nom de variable
+## Nom de variable
 
 ```c
     _var
@@ -416,7 +451,7 @@ Note:
 
 ---
 
-# Nom de variable: exemple
+### Nom de variable: exemple
 
 Est-ce-qu'on comprend ce que fait cet algorithme en Python ?
 
@@ -440,7 +475,7 @@ for player, score in data.items():
 
 ---
 
-# Variables et constantes
+## Variables et constantes
 
 ```c
 const char c1;           //Le caractère ne peut être modifié
@@ -455,7 +490,7 @@ Note:
 
 ---
 
-# Variables: cycle de vie
+## Variables: cycle de vie
 
 Note:
 - Dans la plupart des langages et notamment les plus courants, les variables peuvent changer de valeur au cours du temps (dynamique). Dans les langages de certains paradigmes, notamment la programmation fonctionnelle, leur valeur est au contraire figée dans le temps (statique).
@@ -479,125 +514,7 @@ Note:
 
 ---
 
-# Typage
-
-Note:
-En programmation informatique, un type de donnée, ou simplement type, définit la nature des valeurs que peut prendre une donnée, ainsi que les opérateurs qui peuvent lui être appliqués.
-
----
-
-# Types prédéfinis
-
-- Type booléen : valeurs vrai ou faux — ou respectivement 1 ou 0 ; |
-- Type entier signé ou non signé : valeurs codées sur 8 bits, 16 bits, 32 bits voire 64 bits. |
-- Type réel en virgule flottante. |
-- et bien d'autres, des idées ? |
-
-Note:
-- Tous les langages de programmation offrent des types de base correspondant aux données qui peuvent être traitées directement — à savoir : sans conversion ou formatage préalable — par le processeur. Ces types de base sont souvent :
-- Les langages permettant un accès direct à la mémoire du système offrent par ailleurs le type pointeur, et un type octet.
-- Beaucoup proposent également un type prédéfini, string, pour les chaînes de caractères. Les langages de haut niveau peuvent également supporter nativement des types correspondant à d'autres structures de données.
-
----
-
-# Types paramétrés
-
-Par exemple la déclaration des pointeurs ou des tableaux en langage C nécessite de préciser le type qui doit servir de base aux données manipulées. La programmation générique étend cette pratique pour permettre à l'utilisateur de créer ses propres types paramétrés.
-
-```java
-Collection<String> coll = new LinkedList<String>();
-```
-
----
-
-# Types énumérés
-
-Des langages permettent au développeur de définir des types spécifiques à son application. Les types énumérés correspondent à des ensembles « finis » (cf. les remarques ci-après) de valeurs possibles pour une variable. Le code suivant illustre la définition d'un nouveau type, suivie de la déclaration d'une variable typée :
-
-```c
-type couleur : {rouge, bleu, vert};
-var c : couleur;  // La variable c, du type couleur, peut prendre les valeurs
-	                // rouge, bleu ou vert uniquement.
-```
-
----
-
-# Types composés
-
-Les types composés (struct en C, record en Pascal) permettent de grouper plusieurs champs de types distincts dans une même variable (qui contient alors des « sous-variables »).
-
-En programmation orientée objet, on nomme classe un type composé associé à du code spécifique — la définition des méthodes de la classe — propre à la manipulation de variables de ce type.
-
----
-
-# Types hiérarchiques
-
-La programmation orientée objet étend le paradigme précédent en organisant hiérarchiquement les classes de telle manière qu'une variable d'une sous-classe puisse être utilisée de manière transparente à la place de n'importe quelle classe située à un niveau supérieur dans la hiérarchie définie.
-
----
-
-# Types opaques
-
-Un type opaque est un type incomplètement défini et/ou dont la nature est masquée. Le développeur ne peut ni en examiner le contenu, ni le modifier, et doit simplement le stocker et le transmettre. À cet effet, seule la taille d'un type opaque est réellement connue.
-
-Typiquement, les données opaques sont des handles (terminologie Windows), des descripteurs de fichier (terminologie Unix), des clés, des pointeurs vers des structures masquées (ex. : `FILE*` de la bibliothèque standard du C), etc. La seule notion cruciale, c'est qu'une variable opaque est fournie via une fonction dédiée de création (de type constructeur), transmise telle quelle aux fonctions utilisatrices (souvent via un passage par référence), et enfin détruite via une fonction de libération (de type destructeur).
-
-La possibilité – ou non – d'avoir des types opaques est totalement dépendante du langage de programmation utilisé.
-
----
-
-# Résumé des types de données
-
-- prédéfinis: booléan, entier (signé/non-signé), réel (virgule flottante), ... |
-- paramétrés: types qui prennent d'autres type en paramètre, |
-- énumérés: ensembles « finis » de valeurs possibles, |
-- composés: struct (C), record (Pascal), class (Python),
-- hiérarchiques: sous classes
-- opaques: descripteurs de fichiers, clés ...
-
----
-
-# Typage statique et typage dynamique
-
-On parle de typage statique quand la majorité des vérifications de type sont effectuées au moment de la compilation.
-
-Au contraire, on parle de typage dynamique quand ces vérifications sont effectuées pendant l'exécution.
-
----
-
-# Typage explicite et typage implicite
-
-Le typage explicite oblige l'utilisateur à indiquer les types qu'il utilise, par exemple lors des déclarations de variables ou de fonctions.
-
-Par exemple, en langage C, le typage est explicite :
-
-```c
-int i = 0;  // cette déclaration indique explicitement que
-            // la variable i est de type entier
-```
-
-Au contraire, le typage implicite permet au développeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
-
-Par exemple, en Objective Caml, le typage est implicite :
-
-```
-let i = 0 ;; (* le compilateur détermine automatiquement que
-                la variable i est de type entier *)
-```
-
----
-
-# Typage fort et typage faible
-
-La sûreté du typage est destinée à prévenir les erreurs de type, à savoir : l'emploi d'une variable dont le format est incompatible. La définition d'un langage fortement typé est assez floue :
-
-- soit elle est à rapprocher de celle de langage à typage statique : le compilateur assure la détection au plus tôt des erreurs de type
-- soit on juge de la force du typage d'un langage selon les conversions de type implicites qu'il autorise.
-
-
----
-
-# Adresse de variable
+## Adresse de variable
 
 La mémoire RAM est composée de cellules. Chaque cellule a un numéro, c'est son **adresse**.
 
@@ -605,7 +522,7 @@ La mémoire comporte un grand nombre d'adresses, commençant à l'adresse numér
 
 ---
 
-# Valeur de variable
+## Valeur de variable
 
 À chaque adresse, on peut stocker un nombre. Un et UN SEUL nombre. On ne peut pas stocker deux nombres par adresse.
 
@@ -613,7 +530,7 @@ Votre mémoire n'est faite que pour stocker des nombres. Elle ne peut stocker ni
 
 ---
 
-# Visibilité de variable
+## Visibilité de variable
 
 `+`: accès public: Toutes les autres classes ont accès à cet attribut.
 `#`: accès protégé: Seules la classe elle-même et les classes filles (héritage) ont accès à cet attribut.
@@ -622,7 +539,7 @@ Votre mémoire n'est faite que pour stocker des nombres. Elle ne peut stocker ni
 
 ---
 
-# Durée de vie de variable
+## Durée de vie de variable
 
 On distingue généralement cinq opérations sur les variables, chacune pouvant revêtir des formes syntaxiques différentes.
 
@@ -644,7 +561,7 @@ En ce qui concerne l'initialisation des variables, c'est-à-dire l'association d
 
 ---
 
-# Variables : Résumé
+## Variables : Résumé
 
 - **nom**: sous quel nom est déclarée la variable
 - **type**: convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits) |
@@ -658,7 +575,7 @@ en C et en C++ une variable contenue dans un bloc de code limité par des accola
 
 ---
 
-# Simplification
+## Simplification
 
 Toutefois on peut trouver des langages qui simplifient ces caractéristiques :
 
@@ -672,6 +589,124 @@ Typiquement, le but des langages dits de "scripting" est d'être plus faciles à
 
 ---
 
+# Typage
+
+Note:
+En programmation informatique, un type de donnée, ou simplement type, définit la nature des valeurs que peut prendre une donnée, ainsi que les opérateurs qui peuvent lui être appliqués.
+
+---
+
+## Types prédéfinis
+
+- Type booléen : valeurs vrai ou faux — ou respectivement 1 ou 0 ; |
+- Type entier signé ou non signé : valeurs codées sur 8 bits, 16 bits, 32 bits voire 64 bits. |
+- Type réel en virgule flottante. |
+- et bien d'autres, des idées ? |
+
+Note:
+- Tous les langages de programmation offrent des types de base correspondant aux données qui peuvent être traitées directement — à savoir : sans conversion ou formatage préalable — par le processeur. Ces types de base sont souvent :
+- Les langages permettant un accès direct à la mémoire du système offrent par ailleurs le type pointeur, et un type octet.
+- Beaucoup proposent également un type prédéfini, string, pour les chaînes de caractères. Les langages de haut niveau peuvent également supporter nativement des types correspondant à d'autres structures de données.
+
+---
+
+## Types paramétrés
+
+Par exemple la déclaration des pointeurs ou des tableaux en langage C nécessite de préciser le type qui doit servir de base aux données manipulées. La programmation générique étend cette pratique pour permettre à l'utilisateur de créer ses propres types paramétrés.
+
+```java
+Collection<String> coll = new LinkedList<String>();
+```
+
+---
+
+## Types énumérés
+
+Des langages permettent au développeur de définir des types spécifiques à son application. Les types énumérés correspondent à des ensembles « finis » (cf. les remarques ci-après) de valeurs possibles pour une variable. Le code suivant illustre la définition d'un nouveau type, suivie de la déclaration d'une variable typée :
+
+```c
+type couleur : {rouge, bleu, vert};
+var c : couleur;  // La variable c, du type couleur, peut prendre les valeurs
+	                // rouge, bleu ou vert uniquement.
+```
+
+---
+
+## Types composés
+
+Les types composés (struct en C, record en Pascal) permettent de grouper plusieurs champs de types distincts dans une même variable (qui contient alors des « sous-variables »).
+
+En programmation orientée objet, on nomme classe un type composé associé à du code spécifique — la définition des méthodes de la classe — propre à la manipulation de variables de ce type.
+
+---
+
+## Types hiérarchiques
+
+La programmation orientée objet étend le paradigme précédent en organisant hiérarchiquement les classes de telle manière qu'une variable d'une sous-classe puisse être utilisée de manière transparente à la place de n'importe quelle classe située à un niveau supérieur dans la hiérarchie définie.
+
+---
+
+## Types opaques
+
+Un type opaque est un type incomplètement défini et/ou dont la nature est masquée. Le développeur ne peut ni en examiner le contenu, ni le modifier, et doit simplement le stocker et le transmettre. À cet effet, seule la taille d'un type opaque est réellement connue.
+
+Typiquement, les données opaques sont des handles (terminologie Windows), des descripteurs de fichier (terminologie Unix), des clés, des pointeurs vers des structures masquées (ex. : `FILE*` de la bibliothèque standard du C), etc. La seule notion cruciale, c'est qu'une variable opaque est fournie via une fonction dédiée de création (de type constructeur), transmise telle quelle aux fonctions utilisatrices (souvent via un passage par référence), et enfin détruite via une fonction de libération (de type destructeur).
+
+La possibilité – ou non – d'avoir des types opaques est totalement dépendante du langage de programmation utilisé.
+
+---
+
+## Résumé des types de données
+
+- prédéfinis: booléan, entier (signé/non-signé), réel (virgule flottante), ... |
+- paramétrés: types qui prennent d'autres type en paramètre, |
+- énumérés: ensembles « finis » de valeurs possibles, |
+- composés: struct (C), record (Pascal), class (Python),
+- hiérarchiques: sous classes
+- opaques: descripteurs de fichiers, clés ...
+
+---
+
+## Typage statique et typage dynamique
+
+On parle de typage statique quand la majorité des vérifications de type sont effectuées au moment de la compilation.
+
+Au contraire, on parle de typage dynamique quand ces vérifications sont effectuées pendant l'exécution.
+
+---
+
+## Typage explicite et typage implicite
+
+Le typage explicite oblige l'utilisateur à indiquer les types qu'il utilise, par exemple lors des déclarations de variables ou de fonctions.
+
+Par exemple, en langage C, le typage est explicite :
+
+```c
+int i = 0;  // cette déclaration indique explicitement que
+            // la variable i est de type entier
+```
+
+Au contraire, le typage implicite permet au développeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
+
+Par exemple, en Objective Caml, le typage est implicite :
+
+```
+let i = 0 ;; (* le compilateur détermine automatiquement que
+                la variable i est de type entier *)
+```
+
+---
+
+## Typage fort et typage faible
+
+La sûreté du typage est destinée à prévenir les erreurs de type, à savoir : l'emploi d'une variable dont le format est incompatible. La définition d'un langage fortement typé est assez floue :
+
+- soit elle est à rapprocher de celle de langage à typage statique : le compilateur assure la détection au plus tôt des erreurs de type
+- soit on juge de la force du typage d'un langage selon les conversions de type implicites qu'il autorise.
+
+
+---
+
 # Structures de contrôle
 
 Un bloc d'instruction regroupe plusieurs instructions contiguës.
@@ -682,7 +717,7 @@ Une structure de contrôle permet de décider si on rentre dans un bloc d'instru
 
 ---
 
-# Structures de contrôle: conditions
+## Structures de contrôle: conditions
 
 Les sauts conditionnels permettent de réaliser un branchement si une condition est vérifiée. Si la condition n'est pas vérifiée, l'exécution se poursuit séquentiellement.
 
@@ -698,7 +733,7 @@ End If
 
 ---
 
-# Exemple de si-alors-sinon en Python
+### Exemple de si-alors-sinon en Python
 
 ```python
 print('Départ')
@@ -722,13 +757,13 @@ Fin
 
 ---
 
-# Structures de contrôles : les boucles
+## Structures de contrôles : les boucles
 
 Une boucle est une structure de contrôle destinée à exécuter une portion de code plusieurs fois de suite, la structure de contrôle branchant le pointeur ordinal au début du code tant qu'une condition de continuation est remplie ou, selon les boucles, qu'une condition de sortie n'est pas remplie.
 
 ---
 
-# Types de boucles
+### Types de boucles
 
 Les langages proposent en général plusieurs type de boucles :
 
@@ -740,7 +775,7 @@ Les langages proposent en général plusieurs type de boucles :
 
 ---
 
-# Boucles pré/post condition
+### Boucles pré/post condition
 
 Les langages peuvent proposer plusieurs type de boucles à pré et post-condition :
 
@@ -749,7 +784,7 @@ Les langages peuvent proposer plusieurs type de boucles à pré et post-conditio
 
 ---
 
-# Exemple de boucle "tant que"
+### Exemple de boucle "tant que"
 
 Structure:
 
@@ -778,7 +813,7 @@ Affichera:
 
 ---
 
-# Exemple de boucle "jusqu'à"
+### Exemple de boucle "jusqu'à"
 
 Structure:
 
@@ -822,7 +857,7 @@ Note:
 
 ---
 
-# Types d'erreurs:
+## Types d'erreurs:
 
 - arithmétique (débordement, division par zéro…)
 - collections (débordement d'indices)
@@ -835,7 +870,7 @@ Note:
 
 ---
 
-# Exception arithmétique en Python
+### Exception arithmétique en Python
 
 ```python
 >>> 123/0
@@ -846,7 +881,7 @@ ZeroDivisionError: division by zero
 
 ---
 
-# Gestionnaire d'exceptions
+## Gestionnaire d'exceptions
 
 ```python
 try:
@@ -864,7 +899,7 @@ Le traitement des situations exceptionnelles fait apparaître deux besoins :
 
 ---
 
-# Declenchement d'exception
+## Declenchement d'exception
 
 ```python
 def object_get(id):
@@ -896,7 +931,7 @@ Note:
 
 ---
 
-# Déclaration
+## Déclaration
 
 ```python
 def dire(quoi: str):
@@ -912,7 +947,7 @@ def dire(quoi: str):
 
 ---
 
-# Invocation
+## Invocation
 
 ```python
 >>> direbonjour()
@@ -924,7 +959,7 @@ Les procédures permettent de diviser un problème en décomposant le programme 
 
 ---
 
-# Paramètres
+## Paramètres
 
 ```python
 def dire(quoi: str):
@@ -943,7 +978,7 @@ Note:
 
 ---
 
-# Valeurs de retour
+## Valeurs de retour
 
 ```python
 def ajouterun(nombre: int):
@@ -959,7 +994,7 @@ Note:
 
 ---
 
-# Callbacks
+## Callbacks
 
 ```python
 def ajouterunetappeler(nombre, callback):
@@ -978,7 +1013,7 @@ Note:
 
 ---
 
-# Pointeurs de fonction
+## Pointeurs de fonction
 
 ```c
 int addInt(int n, int m) {
@@ -1008,7 +1043,7 @@ Note:
 
 ---
 
-# Délégués
+## Délégués
 
 ```c#
 public delegate void Del(string message);
@@ -1033,7 +1068,7 @@ Note:
 
 ---
 
-### Fonctions
+## Fonctions
 
 Comme la procedure:
 
@@ -1043,6 +1078,11 @@ Comme la procedure:
   - l'identifiant (nom) du paramètre |
   - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
 - un corps contenant le code réalisant l'opération dévolue à cette routine |
+
+---
+
+## Fonctions (cont.)
+
 
 Dans le cas d'une fonction, la déclaration d'une routine comporte aussi : |
 
@@ -1105,7 +1145,7 @@ Note:
 
 ---
 
-### Programation lambda
+# Programation lambda
 
 ```c
 int n = 2;
@@ -1123,7 +1163,7 @@ Note:
 
 ---
 
-### Programation lambda: langages
+## Programation lambda: langages
 
 - 1958: Lisp |
 - 1975: Scheme |
@@ -1135,7 +1175,7 @@ Note:
 
 ---
 
-## Programmation Orientée Objet
+# Programmation Orientée Objet
 
 - 1960: Ole-Johan Dahl et Kristen Nygaard |
 - 1970: Alan Kay |
@@ -1173,7 +1213,11 @@ Personne('mamie').ditbonjour()
 
 ---
 
-# Multiplication
+# Exemples d'algorithmes
+
+---
+
+## Multiplication
 
 ```
          23958233
@@ -1192,7 +1236,7 @@ Personne('mamie').ditbonjour()
 
 ---
 
-# Tours de Hanoï
+## Tours de Hanoï
 
 ![Glider](assets/image/hanoi.png)
 
@@ -1225,13 +1269,13 @@ Deplacer disque de A a B
 
 ---
 
-### Solutions de représentations graphiques, aide à la réflexion
+# Solutions de représentations graphiques, aide à la réflexion
 
 ![Umbrello](assets/image/umbrello.png)
 
 ---
 
-# Méthode Booch
+## Méthode Booch
 
 Note:
 - La méthode Booch1 est une méthode de développement de logiciels pour la programmation orientée objet. Elle a été conçue par Grady Booch qui l'a publiée en 1992 puis révisée en 19941. Elle se compose d'un langage de modélisation graphique2, d'un processus itératif de développement3, et d'un ensemble de pratiques recommandées4.
@@ -1240,7 +1284,7 @@ Note:
 
 ---
 
-# Méthode Booch: Diagrammes
+### Méthode Booch: Diagrammes
 
 | Modèle 	| Type 		| Diagramme 			|
 |-----------|-----------|-----------------------|
@@ -1256,7 +1300,7 @@ Note:
 
 ---
 
-# Méthode Booch: Macro Processus
+### Méthode Booch: Macro Processus
 
 - conceptualisation |
 - analyse |
@@ -1275,7 +1319,7 @@ Le macro-processus identifie le cycle d'activité suivant:
 
 ---
 
-# Méthode Booch: Micro Processus
+### Méthode Booch: Micro Processus
 
 - Identification des classes et objets |
 - Identification de leur sémantique |
@@ -1287,7 +1331,7 @@ Le micro-processus s'applique aux nouvelles classes, structures et comportements
 
 ---
 
-# OMT
+## OMT
 
 ![Diagramme d'objets OMT](assets/image/omt.object.png)
 
@@ -1298,7 +1342,7 @@ Note:
 
 ---
 
-### OOSE
+## OOSE
 
 Note:
 - Object Oriented Software Engineering (OOSE) est un langage de modélisation objet créé par Ivar Jacobson.
@@ -1357,7 +1401,7 @@ Note:
 
 ---
 
-# UML
+## UML
 
 Note:
 - Le Langage de Modélisation Unifié, de l'anglais Unified Modeling Language (UML), est un langage de modélisation graphique à base de pictogrammes conçu pour fournir une méthode normalisée pour visualiser la conception d'un système. Il est couramment utilisé en développement logiciel et en conception orientée objet.
@@ -1526,13 +1570,13 @@ Un système expert se compose de 3 parties :
 
 ---
 
-### Heuristiques
+## Heuristiques
 
 Pour certains problèmes, les algorithmes ont une complexité beaucoup trop grande pour obtenir un résultat en temps raisonnable, même si l’on pouvait utiliser une puissance de calcul phénoménale.
 
 ---
 
-### Complexité d'un algorithme
+## Complexité d'un algorithme
 
 l'étude formelle de la quantité de ressources (par exemple de temps ou
 d'espace) nécessaire à l'exécution de cet algorithme
