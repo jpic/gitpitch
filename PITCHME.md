@@ -18,6 +18,13 @@ Note:
 
 ![algorithme au chocolat](assets/image/algo-choco.png)
 
+Note:
+Un algorithme pour faire un gateau au chocolat. Nous avons bien:
+- suite d'opérations ou d'instructions
+- pour résoudre un problème
+
+Conclusion: un algorithme ne fait pas forcemment peur.
+
 ---
 
 # L'algorithmique
