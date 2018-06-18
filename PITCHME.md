@@ -172,6 +172,10 @@ Note:
 
 ---
 
+# Machine à état
+
+---
+
 ## Principe d'une machine à état
 
 - Un automate fini est une construction mathématique abstraite, |
