@@ -5,7 +5,7 @@
 ### Formation
 
 ---
-## Principes generaux
+## Principes généraux
 
 - suite d'opérations ou d'instructions
 - pour résoudre un problème
@@ -45,7 +45,7 @@ Note:
 - Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
 - Dans son ouvrage Abrégé du calcul par la restauration et la comparaison, il étudie toutes les équations du second degré et en donne la résolution par des algorithmes généraux.
 - Il utilise des méthodes semblables à celles des Babyloniens, mais se différencie par ses explications systématiques là où les Babyloniens donnaient seulement des exemples.
-- Le mot algorithme vient du nom du mathématicien (latinisé au Moyen Âge en Algoritmi), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. Algorithme a donné algorithmique auxquels certains préfèrent le néologisme algorithmie.
+- Le mot algorithme vient du nom du mathématicien (latinisé au Moyen Âge en Algoritmie), qui, au IXe siècle écrivit le premier ouvrage systématique donnant des solutions aux équations linéaires et quadratiques. Algorithme a donné algorithmique auxquels certains préfèrent le néologisme algorithmie.
 
 ---
 
@@ -100,8 +100,8 @@ Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la de
 “One of my most productive days was throwing away 1000 lines of code.” – Ken Thompson
 
 Note:
-- Ecrit par l'etre humain, l'algorithme est traduit en instructions comprehensibles par l'ordinnateur.
-- Sa premiere fonction est d'etre comprise par un autre etre humain dans l'equipe de developpement etc
+- Ecrit par l'être humain, l'algorithme est traduit en instructions compréhensibles par l'ordinateur.
+- Sa première fonction est d'être comprise par un autre être humain dans l'équipe de développement etc
 
 ---
 
@@ -120,7 +120,7 @@ Note:
 ![pycharm](assets/image/vscode.png)
 
 Note:
-- Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hesiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement.
+- Certains environnements sont dédiés à un langage de programmation en particulier. Il ne faut pas hésiter a tout essayer pour voir ce qui permet d'arriver a ses fins le plus facilement.
 - Les outils qui assistent les développeurs dans toutes les étapes de la réalisation du logiciel: définition, conception, programmation, test et maintenance.
 - Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation
 
@@ -148,7 +148,7 @@ Note:
 
 Note:
 - outil pour réaliser automatiquement des tests
-- car le meilleur moyen de vérifier un algorithme complexe est souvent de créer un deuxième algorithme pour testr le premier
+- car le meilleur moyen de vérifier un algorithme complexe est souvent de créer un deuxième algorithme pour tester le premier
 - TDD
 
 ---
@@ -210,8 +210,8 @@ Note:
 
 Note:
 L'alphabet contient un symbole spécial appelé « symbole blanc » et un ou plusieurs autres symboles.
-On peut toujours encoder un symbole de l'alphabet en une suite de 1 et de 0, par example sur deux bits pour trois caractères:
-Sur un ruban de 0 et de 1 on peut donc décider d'encoder des symboles d'alphabets de plus grandes tailles. Par exemple, UTF-8 utilise 8 bits par symbole et contient la pluparts des symboles d'alphabets utilisés par les humains. Cela consomme simplement plus d'espace que pour trois caractères.
+On peut toujours encoder un symbole de l'alphabet en une suite de 1 et de 0, par exemple sur deux bits pour trois caractères:
+Sur un ruban de 0 et de 1 on peut donc décider d'encoder des symboles d'alphabets de plus grandes tailles. Par exemple, UTF-8 utilise 8 bits par symbole et contient la plupart des symboles d'alphabets utilisés par les humains. Cela consomme simplement plus d'espace que pour trois caractères.
 
 ---
 
@@ -260,7 +260,7 @@ En fonction:
 
 Note:
 La tête de lecture/écriture peut lire et écrire les symboles sur le ruban, et se déplacer vers la gauche ou vers la droite du ruban.
-À chaque étape de son calcul, la machine execute l'action correspondante à son actuel et au symbole lu par la tête de lecture. L'action correspond soit à l'arrêt de la machine, soit à l'écriture d'un symbole sous la tête de lecture, du déplacement de la tête de lecture du coté défini par l'action, et du changement d'état défini par l'action.
+À chaque étape de son calcul, la machine exécute l'action correspondante à son actuel et au symbole lu par la tête de lecture. L'action correspond soit à l'arrêt de la machine, soit à l'écriture d'un symbole sous la tête de lecture, du déplacement de la tête de lecture du coté défini par l'action, et du changement d'état défini par l'action.
 
 ---
 
@@ -453,7 +453,7 @@ Note:
 
 Note:
 - la déclaration du nom, éventuellement avec type,
-- la définition permet d'alouer/associer une zone mémoire qui va être utilisée pour stocker la variable, comme lorsqu'on lui donne une valeur initiale,
+- la définition permet d'allouer/associer une zone mémoire qui va être utilisée pour stocker la variable, comme lorsqu'on lui donne une valeur initiale,
 - l'affectation consiste à attribuer une valeur à une variable,
 - la lecture consiste à utiliser la valeur liée à la variable,
 - la suppression réalisée soit automatiquement soit par une instruction du langage.
@@ -472,7 +472,7 @@ En programmation informatique, un type de donnée, ou simplement type, définit 
 - Type booléen : valeurs vrai ou faux — ou respectivement 1 ou 0 ; |
 - Type entier signé ou non signé : valeurs codées sur 8 bits, 16 bits, 32 bits voire 64 bits. |
 - Type réel en virgule flottante. |
-- et bien d'autres, des idees ? |
+- et bien d'autres, des idées ? |
 
 Note:
 - Tous les langages de programmation offrent des types de base correspondant aux données qui peuvent être traitées directement — à savoir : sans conversion ou formatage préalable — par le processeur. Ces types de base sont souvent :
@@ -530,11 +530,11 @@ La possibilité – ou non – d'avoir des types opaques est totalement dépenda
 # Résumé des types de données
 
 - prédéfinis: booléan, entier (signé/non-signé), réel (virgule flottante), ... |
-- paramétrés: types qui prennent d'autres type en paramêtre, |
+- paramétrés: types qui prennent d'autres type en paramètre, |
 - énumérés: ensembles « finis » de valeurs possibles, |
 - composés: struct (C), record (Pascal), class (Python),
 - hiérarchiques: sous classes
-- opaques: descripteurs de fichiers, cléfs ...
+- opaques: descripteurs de fichiers, clés ...
 
 ---
 
@@ -557,7 +557,7 @@ int i = 0;  // cette déclaration indique explicitement que
             // la variable i est de type entier
 ```
 
-Au contraire, le typage implicite permet au developpeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
+Au contraire, le typage implicite permet au développeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
 
 Par exemple, en Objective Caml, le typage est implicite :
 
@@ -655,7 +655,7 @@ Typiquement, le but des langages dits de "scripting" est d'être plus faciles à
 
 # Structures de contrôle
 
-Un bloc d'instruction regroupe plusieurs instructions contigües.
+Un bloc d'instruction regroupe plusieurs instructions contiguës.
 
 Une structure de contrôle est une instruction particulière d'un langage de programmation impératif pouvant dévier le flot de contrôle du programme la contenant lorsqu'elle est exécutée.
 
@@ -873,7 +873,7 @@ Bonjour le monde !
 Note:
 - En informatique, une routine est une entité informatique qui encapsule une portion de code (une séquence d'instructions) effectuant un traitement spécifique bien identifié (asservissement, tâche, calcul, etc.) relativement indépendant du reste du programme, et qui peut être réutilisé dans le même programme, ou dans un autre. Dans ce cas, on range souvent la routine dans une bibliothèque pour la rendre disponible à d'autres projets de programmation, tout en préservant l'intégrité de son implémentation.
 - La procédure est Une routine qui ne retourne aucune valeur, réalise une opération (tâche) bien déterminée et dont l'emploi joue le rôle d'une instruction ad-hoc.
-- Vous devez declarer et definir une procedure avant de l'invoquer. Soit en deux temps, soit d'une traite.
+- Vous devez déclarer et définir une procedure avant de l'invoquer. Soit en deux temps, soit d'une traite.
 
 ---
 
@@ -917,7 +917,7 @@ Bonjour
 
 Note:
 - une copie des arguments provenant de la routine appelante est reçue dans les paramètres de la routine appelée (routine invoquée) au lieu de travailler sur les véritables variables de la routine appelante
-- Cependant, les routines demandent souvent l'adresse mémoire des variables de la routine appelante (arguments) plutôt que leurs valeurs: quoi n'est pas une copie de la chaine mais un pointeur vers la chaine de caracteres definies dans la routine appelante
+- Cependant, les routines demandent souvent l'adresse mémoire des variables de la routine appelante (arguments) plutôt que leurs valeurs: quoi n'est pas une copie de la chaine mais un pointeur vers la chaine de caractères définis dans la routine appelante
 - Le corps de la routine comprend :
   - la définition des variables locales à la routine, certaines de ces variables n'existant que le temps de son exécution;
   - la séquence des instructions à exécuter.
@@ -1004,13 +1004,13 @@ Del handler = DelegateMethod;
 handler("Hello World");
 ```
 
-@[1](Definition du delegate, tout appel du delegate sera passé a la fonction deleguee de cette fonction)
-@[3-6](Declaration et definition d'une fonction pour le deleguée)
+@[1](Definition du delegate, tout appel du delegate sera passé a la fonction déléguée de cette fonction)
+@[3-6](Declaration et definition d'une fonction pour le déléguer)
 @[8](Instanciation du délégué)
 @[10](Appel du délégué)
 
 Note:
-- Le délégué est une methode d'objet avec eventuellement un objet attaché.
+- Le délégué est une methode d'objet avec éventuellement un objet attaché.
 
 ---
 
@@ -1122,7 +1122,7 @@ Note:
 - 1970: Alan Kay |
 
 Note:
-- un paradigme de programmation informatique elabore par les norvegiens et l'americain aussi
+- un paradigme de programmation informatique élabore par les norvégiens et l'américain aussi
 - Il consiste en la définition et l'interaction de briques logicielles appelées objets ; un objet représente un concept, une idée ou toute entité du monde physique, comme une voiture, une personne ou encore une page d'un livre. Il possède une structure interne et un comportement, et il sait interagir avec ses pairs.
 - Il s'agit donc de représenter ces objets et leurs relations ; l'interaction entre les objets via leurs relations permet de concevoir et réaliser les fonctionnalités attendues, de mieux résoudre le ou les problèmes. Dès lors, l'étape de modélisation revêt une importance majeure et nécessaire pour la POO. C'est elle qui permet de transcrire les éléments du réel sous forme virtuelle.
 
@@ -1523,7 +1523,7 @@ C.A.R. Hoare, The 1980 ACM Turing Award Lecture:
 
 ---
 
-### Recherche de pic sur liste a une dimention
+### Recherche de pic sur liste a une dimension
 
 | a | b | c | d | e | f | g | h | i |
 | - | - | - | - | - | - | - | - | - |
