@@ -14,9 +14,7 @@ Note:
 - Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat
 - Un problème est un objet mathématique qui représente une question ou un ensemble de questions auxquelles un ordinateur devrait être en mesure de répondre.
 
----
-
-![algorithme au chocolat](assets/image/algo-choco.png)
+---?image=assets/image/algo-choco.png
 
 Note:
 Un algorithme pour faire un gateau au chocolat. Nous avons bien:
