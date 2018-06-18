@@ -99,7 +99,7 @@ Note:
 ## Alan Turing
 ### 1936
 
-![turing](assets/image/turing.png&size=auto 90%)
+![turing](assets/image/turing.png =100x20)
 
 Note:
 - L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des formalismes, par exemple celui des machines de Turing, qui permettent de définir précisément ce qu'on entend par "étapes", par "précis" et par "non ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des algorithmes.
