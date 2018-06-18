@@ -10,6 +10,9 @@
 - suite d'opérations ou d'instructions
 - pour résoudre un problème
 
+![algorithme au chocolat](assets/image/algo-choco.png)
+
+
 Note:
 - Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions permettant de résoudre un problème ou d'obtenir un résultat
 - Un problème est un objet mathématique qui représente une question ou un ensemble de questions auxquelles un ordinateur devrait être en mesure de répondre.
@@ -41,6 +44,9 @@ Note:
 # Al-Khwârizmî
 ## 813-833
 
+
+![khwarizmi](assets/image/kwarizmi.png)
+
 Note:
 - Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
 - Dans son ouvrage Abrégé du calcul par la restauration et la comparaison, il étudie toutes les équations du second degré et en donne la résolution par des algorithmes généraux.
@@ -51,6 +57,8 @@ Note:
 
 # Averroès
 ## 1126-1198
+
+![averroes](assets/image/ave.png)
 
 Note:
 Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où la thèse s’affine étape par étape, itérativement, jusqu’à une certaine convergence et ceci conformément au déroulement d’un algorithme. À la même époque, au XIIe siècle, le moine Adelard de Bath introduit le terme latin de algorismus, par référence au nom de Al Khuwarizmi. Ce mot donne algorithme en français en 1554.
@@ -80,6 +88,8 @@ Note:
 
 # Alan Turing
 ## 1936
+
+![turing](assets/image/turing.png)
 
 Note:
 - L’algorithmique des XXe et XXIe siècles a pour fondement mathématique des formalismes, par exemple celui des machines de Turing, qui permettent de définir précisément ce qu'on entend par "étapes", par "précis" et par "non ambigu" et qui donnent un cadre scientifique pour étudier les propriétés des algorithmes.
