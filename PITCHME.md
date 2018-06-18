@@ -55,7 +55,7 @@ Note:
 ### 813-833
 
 
-![khwarizmi](assets/image/kwarizmi.png)
+<img src="assets/image/khwarizmi.png" alt="al khwarizmi" class="avatar" />
 
 Note:
 - Le premier à avoir systématisé des algorithmes est le mathématicien perse Al-Khwârizmî, actif entre 813 et 833. |
@@ -99,7 +99,7 @@ Note:
 ## Alan Turing
 ### 1936
 
-<img src="assets/image/turing.png" alt="turing" style="avatar" />
+<img src="assets/image/turing.png" alt="turing" class="avatar" />
 
 
 Note:
