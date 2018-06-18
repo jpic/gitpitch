@@ -181,7 +181,7 @@ Note:
 - Le passage d'un état à un autre est activé par un événement ou une condition ; |
 - ce passage est appelé une « transition ». |
 
----?image=assets/image/automates.png
+---?image=assets/image/automates.png&size=contain
 
 ---
 
