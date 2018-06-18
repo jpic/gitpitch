@@ -38,7 +38,7 @@ Note:
 
 ---
 
-# Antiquité
+## Antiquité
 
 - -3000BC: Babyloniens |
 - ~300BC: Euclide PGCD |
@@ -51,8 +51,8 @@ Note:
 
 ---
 
-# Al-Khwârizmî
-## 813-833
+## Al-Khwârizmî
+### 813-833
 
 
 ![khwarizmi](assets/image/kwarizmi.png)
@@ -65,8 +65,8 @@ Note:
 
 ---
 
-# Averroès
-## 1126-1198
+## Averroès
+### 1126-1198
 
 ![averroes](assets/image/ave.png)
 
@@ -75,8 +75,8 @@ Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où
 
 ---
 
-# René Descartes
-## XVIIe siècle
+## René Descartes
+### XVIIe siècle
 
 « diviser chacune des difficultés que j’examinerois, en autant de parcelles qu’il se pourroit, et qu’il seroit requis pour les mieux résoudre. » |
 
@@ -87,8 +87,8 @@ Note:
 
 ---
 
-# David Hilbert
-## 1900
+## David Hilbert
+### 1900
 
 Note:
 - Lors du deuxième congrès international des mathématiciens, tenu à Paris en août 1900, David Hilbert présenta une liste de problèmes qui tenaient jusqu'alors les mathématiciens en échec. Ces problèmes devaient, selon Hilbert, marquer le cours des mathématiques du XXe siècle, et l'on peut dire aujourd'hui que cela a été grandement le cas. Publiée après la tenue du congrès, la liste définitive comprenait 23 problèmes, aujourd'hui appelés les problèmes de Hilbert.
@@ -96,8 +96,8 @@ Note:
 
 ---
 
-# Alan Turing
-## 1936
+## Alan Turing
+### 1936
 
 ![turing](assets/image/turing.png)
 
@@ -107,8 +107,8 @@ Note:
 
 ---
 
-# Donald Knuth
-## deuxième moitié du XXe siècle
+## Donald Knuth
+### Deuxième moitié du XXe siècle
 
 Note:
 Grâce à l'informatique, l'algorithmique s'est beaucoup développée dans la deuxième moitié du XXe siècle. Donald Knuth, auteur du traité The Art of Computer Programming, qui décrit de très nombreux algorithmes, a contribué, avec d'autres, à en poser les fondements mathématiques de leur analyse.
