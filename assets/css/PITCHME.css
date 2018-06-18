@@ -5,12 +5,16 @@
  * https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS
  */
 
-/* test */
+/* Custom CSS */
 .reveal h1, .reveal h2, .reveal h3 {
     color: red;
 }
-/* test */
 
+.avatar {
+    height: 15rem;
+}
+
+/* Reveal CSS */
 .reveal pre {
   width: 100%;
 }

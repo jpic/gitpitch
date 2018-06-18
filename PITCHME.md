@@ -68,7 +68,7 @@ Note:
 ## Averroès
 ### 1126-1198
 
-![averroes](assets/image/ave.png)
+<img src="assets/image/ave.png" alt="averroes" class="avatar" />
 
 Note:
 Le savant andalou Averroès (1126-1198) évoque une méthode de raisonnement où la thèse s’affine étape par étape, itérativement, jusqu’à une certaine convergence et ceci conformément au déroulement d’un algorithme. À la même époque, au XIIe siècle, le moine Adelard de Bath introduit le terme latin de algorismus, par référence au nom de Al Khuwarizmi. Ce mot donne algorithme en français en 1554.
@@ -99,7 +99,7 @@ Note:
 ## Alan Turing
 ### 1936
 
-<img src="assets/image/turing.png" alt="turing" style="height: 10rem; width: 10rem" />
+<img src="assets/image/turing.png" alt="turing" style="avatar" />
 
 
 Note:
