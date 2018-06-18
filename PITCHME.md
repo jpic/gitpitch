@@ -1068,7 +1068,7 @@ Note:
 
 ---
 
-### Fonctions
+## Fonctions
 
 Comme la procedure:
 
@@ -1078,6 +1078,11 @@ Comme la procedure:
   - l'identifiant (nom) du paramètre |
   - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
 - un corps contenant le code réalisant l'opération dévolue à cette routine |
+
+---
+
+## Fonctions (cont.)
+
 
 Dans le cas d'une fonction, la déclaration d'une routine comporte aussi : |
 
@@ -1140,7 +1145,7 @@ Note:
 
 ---
 
-### Programation lambda
+# Programation lambda
 
 ```c
 int n = 2;
@@ -1158,7 +1163,7 @@ Note:
 
 ---
 
-### Programation lambda: langages
+## Programation lambda: langages
 
 - 1958: Lisp |
 - 1975: Scheme |
@@ -1170,7 +1175,7 @@ Note:
 
 ---
 
-## Programmation Orientée Objet
+# Programmation Orientée Objet
 
 - 1960: Ole-Johan Dahl et Kristen Nygaard |
 - 1970: Alan Kay |
@@ -1208,7 +1213,11 @@ Personne('mamie').ditbonjour()
 
 ---
 
-# Multiplication
+# Exemples d'algorithmes
+
+---
+
+## Multiplication
 
 ```
          23958233
@@ -1227,7 +1236,7 @@ Personne('mamie').ditbonjour()
 
 ---
 
-# Tours de Hanoï
+## Tours de Hanoï
 
 ![Glider](assets/image/hanoi.png)
 
@@ -1260,13 +1269,13 @@ Deplacer disque de A a B
 
 ---
 
-### Solutions de représentations graphiques, aide à la réflexion
+# Solutions de représentations graphiques, aide à la réflexion
 
 ![Umbrello](assets/image/umbrello.png)
 
 ---
 
-# Méthode Booch
+## Méthode Booch
 
 Note:
 - La méthode Booch1 est une méthode de développement de logiciels pour la programmation orientée objet. Elle a été conçue par Grady Booch qui l'a publiée en 1992 puis révisée en 19941. Elle se compose d'un langage de modélisation graphique2, d'un processus itératif de développement3, et d'un ensemble de pratiques recommandées4.
@@ -1275,7 +1284,7 @@ Note:
 
 ---
 
-# Méthode Booch: Diagrammes
+### Méthode Booch: Diagrammes
 
 | Modèle 	| Type 		| Diagramme 			|
 |-----------|-----------|-----------------------|
@@ -1291,7 +1300,7 @@ Note:
 
 ---
 
-# Méthode Booch: Macro Processus
+### Méthode Booch: Macro Processus
 
 - conceptualisation |
 - analyse |
@@ -1310,7 +1319,7 @@ Le macro-processus identifie le cycle d'activité suivant:
 
 ---
 
-# Méthode Booch: Micro Processus
+### Méthode Booch: Micro Processus
 
 - Identification des classes et objets |
 - Identification de leur sémantique |
@@ -1322,7 +1331,7 @@ Le micro-processus s'applique aux nouvelles classes, structures et comportements
 
 ---
 
-# OMT
+## OMT
 
 ![Diagramme d'objets OMT](assets/image/omt.object.png)
 
@@ -1333,7 +1342,7 @@ Note:
 
 ---
 
-### OOSE
+## OOSE
 
 Note:
 - Object Oriented Software Engineering (OOSE) est un langage de modélisation objet créé par Ivar Jacobson.
@@ -1392,7 +1401,7 @@ Note:
 
 ---
 
-# UML
+## UML
 
 Note:
 - Le Langage de Modélisation Unifié, de l'anglais Unified Modeling Language (UML), est un langage de modélisation graphique à base de pictogrammes conçu pour fournir une méthode normalisée pour visualiser la conception d'un système. Il est couramment utilisé en développement logiciel et en conception orientée objet.
@@ -1561,13 +1570,13 @@ Un système expert se compose de 3 parties :
 
 ---
 
-### Heuristiques
+## Heuristiques
 
 Pour certains problèmes, les algorithmes ont une complexité beaucoup trop grande pour obtenir un résultat en temps raisonnable, même si l’on pouvait utiliser une puissance de calcul phénoménale.
 
 ---
 
-### Complexité d'un algorithme
+## Complexité d'un algorithme
 
 l'étude formelle de la quantité de ressources (par exemple de temps ou
 d'espace) nécessaire à l'exécution de cet algorithme
