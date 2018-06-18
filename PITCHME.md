@@ -23,6 +23,8 @@ Un algorithme pour faire un gateau au chocolat. Nous avons bien:
 - suite d'opérations ou d'instructions
 - pour résoudre un problème
 
+Ici, les ingredients sont l'entrée de notre algorithme, l'algorithme est la recette, et sa sortie est le gâteau (miam !)
+
 Conclusion: un algorithme ne fait pas forcemment peur.
 
 ---
