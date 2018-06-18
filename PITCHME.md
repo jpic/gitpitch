@@ -144,7 +144,7 @@ Note:
 - Ces outils tiennent également compte des différents rôles au sein d'une équipe de programmation
 
 ---
-## Environnement de développement: éditeur de code
+### Editeur de code
 
 ![vim](assets/image/vim.png)
 
@@ -153,7 +153,7 @@ Toujours un éditeur de texte incorporé, avec souvent la possibilité de le rem
 
 ---
 
-## Environnement de développement: création d'interface graphique
+### Céation d'interface graphique
 
 ![glade](assets/image/glade.png)
 
@@ -161,7 +161,7 @@ Note:
 - Un tel outil permet au programmeur de gagner un temps significatif dans la construction de l'interface graphique de son programme. Jusqu'à l'arrivée de la technologie Java, de tels outils ciblaient toujours un système d'exploitation en particulier.
 
 ---
-## Environnement de développement: automatisation des tests
+### Automatisation des tests
 
 ![tests](assets/image/tests.png)
 
