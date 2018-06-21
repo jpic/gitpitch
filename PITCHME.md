@@ -561,132 +561,133 @@ Note:
 
 # Typage statique et typage dynamique
 
-On parle de typage statique quand la majorité des vérifications de type sont effectuées au moment de la compilation.
-
-Au contraire, on parle de typage dynamique quand ces vérifications sont effectuées pendant l'exécution.
+Note:
+- On parle de typage statique quand la majorité des vérifications de type sont effectuées au moment de la compilation.
+- Au contraire, on parle de typage dynamique quand ces vérifications sont effectuées pendant l'exécution.
 
 ---
 
 # Typage explicite et typage implicite
 
-Le typage explicite oblige l'utilisateur à indiquer les types qu'il utilise, par exemple lors des déclarations de variables ou de fonctions.
 
-Par exemple, en langage C, le typage est explicite :
-
+C, explicite:
 ```c
 int i = 0;  // cette déclaration indique explicitement que
             // la variable i est de type entier
 ```
 
-Au contraire, le typage implicite permet au développeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
-
-Par exemple, en Objective Caml, le typage est implicite :
-
+OCaml, implicite:
 ```
 let i = 0 ;; (* le compilateur détermine automatiquement que
                 la variable i est de type entier *)
 ```
 
+Note:
+- Le typage explicite oblige l'utilisateur à indiquer les types qu'il utilise, par exemple lors des déclarations de variables ou de fonctions.
+- Par exemple, en langage C, le typage est explicite
+- Au contraire, le typage implicite permet au développeur de laisser le compilateur ou le runtime le soin de déterminer tout seul les types de données utilisées.
+- Par exemple, en Objective Caml, le typage est implicite :
+
 ---
 
 # Typage fort et typage faible
 
+Note:
 La sûreté du typage est destinée à prévenir les erreurs de type, à savoir : l'emploi d'une variable dont le format est incompatible. La définition d'un langage fortement typé est assez floue :
-
 - soit elle est à rapprocher de celle de langage à typage statique : le compilateur assure la détection au plus tôt des erreurs de type
 - soit on juge de la force du typage d'un langage selon les conversions de type implicites qu'il autorise.
-
 
 ---
 
 # Adresse de variable
 
+Note:
 La mémoire RAM est composée de cellules. Chaque cellule a un numéro, c'est son **adresse**.
-
 La mémoire comporte un grand nombre d'adresses, commençant à l'adresse numéro 0 et se terminant à l'adresse numéro (insérez un très grand nombre ici). Le nombre d'adresses disponibles dépend en fait de la quantité de mémoire dont dispose votre ordinateur.
 
 ---
 
 # Valeur de variable
 
+Note:
 À chaque adresse, on peut stocker un nombre. Un et UN SEUL nombre. On ne peut pas stocker deux nombres par adresse.
-
 Votre mémoire n'est faite que pour stocker des nombres. Elle ne peut stocker ni lettres ni phrases. Pour contourner ce problème, on a inventé une table qui fait la liaison entre les nombres et les lettres. Cette table dit par exemple : « Le nombre 89 représente la lettre Y ». Nous reviendrons dans un prochain chapitre sur la gestion des caractères ; pour l'instant, nous nous concentrons sur le fonctionnement de la mémoire.
 
 ---
 
 # Visibilité de variable
 
-`+`: accès public: Toutes les autres classes ont accès à cet attribut.
-`#`: accès protégé: Seules la classe elle-même et les classes filles (héritage) ont accès à cet attribut.
-`~`: accès package: Classe visible uniquement dans le package.
-`-`: accès privé: Seule la classe elle-même a accès à cet attribut.
+- public |
+- protégé |
+- privé |
+
+Note:
+- accès public: Toutes les autres classes ont accès à cet attribut. |
+- accès protégé: Seules la classe elle-même et les classes filles (héritage) ont accès à cet attribut. |
+- accès privé: Seule la classe elle-même a accès à cet attribut. |
 
 ---
 
 # Durée de vie de variable
 
-On distingue généralement cinq opérations sur les variables, chacune pouvant revêtir des formes syntaxiques différentes.
+- déclaration |
+- définition |
+- affectation |
+- lecture |
+- suppression |
 
+Note:
+On distingue généralement cinq opérations sur les variables, chacune pouvant revêtir des formes syntaxiques différentes.
 - la déclaration permet de déclarer un nom de variable, éventuellement de lui associer un type,
 - la définition permet d'associer une zone mémoire qui va être utilisée pour stocker la variable, comme lorsqu'on lui donne une valeur initiale,
 - l'affectation consiste à attribuer une valeur à une variable,
 - la lecture consiste à utiliser la valeur liée à la variable,
 - la suppression réalisée soit automatiquement soit par une instruction du langage.
-
 Dans les langages de programmation fonctionnelle ou de programmation logique, les variables ne peuvent être associées qu'à une seule valeur au cours de leur existence.
-
----
-
 Les langages, comme le C, Caml ou Pascal, imposent de déclarer une variable voire de lui donner un type avant son usage. La déclaration imposée des variables permet au compilateur ou à l'interpréteur d'identifier les erreurs typographiques comme des variables non déclarées ou des variables homonymes. D'autres langages effectuent la déclaration au moment de la première affectation (c'est le cas de la plupart des langages de script) ou lors de leur première apparition dans le code (comme dans Prolog).
-
----
-
 En ce qui concerne l'initialisation des variables, c'est-à-dire l'association d'une première valeur, certains langages imposent d'initialiser une variable avant sa première lecture alors que d'autres fournissent une valeur implicite (spécifiée ou indéterminée). Des langages comme Oz ou Prolog ne réalisent pas à proprement parler d'initialisation. Lors de la déclaration des variables aucune valeur n'est associée, on dit que la variable n'est pas liée. La valeur de la variable est déterminée au fur et à mesure de l'exécution du programme, on parle alors d'unification.
 
 ---
 
 # Variables : Résumé
 
+- nom |
+- type |
+- valeur |
+- adresse |
+- portée |
+- visibilité |
+- durée de vie |
+
+Note:
 - **nom**: sous quel nom est déclarée la variable
-- **type**: convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits) |
-- **valeur**, la séquence de bits elle-même, ne peut varier dans le cas d'une variable **constante** |
-- **adresse**: l'endroit dans la mémoire où la valeur est stockée |
-- **portée**: portion de code source où elle est accessible |
-- **visibilité**: ensemble de règles fixant qui peut utiliser la variable (exemple : mots-clefs public, private, protected, ou le masquage d'une variable par une autre) |
-- **durée de vie**: temps d'exécution pendant laquelle la variable existe. |
-
+- **type**: convention d'interprétation de la séquence de bits qui constitue la variable. Le type de la variable spécifie aussi la longueur de cette séquence (8 bits, 32 bits, 64 bits)
+- **valeur**, la séquence de bits elle-même, ne peut varier dans le cas d'une variable **constante**
+- **adresse**: l'endroit dans la mémoire où la valeur est stockée
+- **portée**: portion de code source où elle est accessible
+- **visibilité**: ensemble de règles fixant qui peut utiliser la variable (exemple : mots-clefs public, private, protected, ou le masquage d'une variable par une autre)
+- **durée de vie**: temps d'exécution pendant laquelle la variable existe.
 en C et en C++ une variable contenue dans un bloc de code limité par des accolades "{}" possède la durée de vie correspondant au temps d'exécution de ce bloc. Il ne faut pas confondre la durée de vie d'une variable locale et sa visibilité, ou sa portée : une variable hors de portée (ex : masquée par une autre), existe toujours. |
-
----
-
-# Simplification
-
 Toutefois on peut trouver des langages qui simplifient ces caractéristiques :
-
 - la notion de variable est complétée par la notion de pointeur (variable qui contient une adresse) dans tous les langages qui permettent la création dynamique de variable (new en C++, Java); L'adresse contenu dans la variable pointeur peut être inaccessible au programmeur (PHP, Java), ou directement accessible (C++).
 - le PHP ne possède pas un typage fort, comme une grande partie des langages scripts ;
 - le Prolog ne permet pas qu'une variable change de valeur au cours du temps une fois la première identification faite ;
 - la visibilité de la variable est public par défaut en C ;
 - la notion de pointeur en C++ est remplacée par la notion de référence en Java, en Prolog l'adresse d'une variable n'est pas accessible au programmeur.
-
 Typiquement, le but des langages dits de "scripting" est d'être plus faciles à manipuler pour résoudre des problèmes avec des algorithmes sur mesure.
 
 ---
 
 # Structures de contrôle
 
+Note:
 Un bloc d'instruction regroupe plusieurs instructions contiguës.
-
 Une structure de contrôle est une instruction particulière d'un langage de programmation impératif pouvant dévier le flot de contrôle du programme la contenant lorsqu'elle est exécutée.
-
 Une structure de contrôle permet de décider si on rentre dans un bloc d'instruction ou pas.
 
 ---
 
 # Structures de contrôle: conditions
-
-Les sauts conditionnels permettent de réaliser un branchement si une condition est vérifiée. Si la condition n'est pas vérifiée, l'exécution se poursuit séquentiellement.
 
 Structure si-alors(-sinon):
 
@@ -697,6 +698,9 @@ Else
    (alternative)
 End If
 ```
+
+Note:
+Les sauts conditionnels permettent de réaliser un branchement si une condition est vérifiée. Si la condition n'est pas vérifiée, l'exécution se poursuit séquentiellement.
 
 ---
 
@@ -726,14 +730,21 @@ Fin
 
 # Structures de contrôles : les boucles
 
+Note:
 Une boucle est une structure de contrôle destinée à exécuter une portion de code plusieurs fois de suite, la structure de contrôle branchant le pointeur ordinal au début du code tant qu'une condition de continuation est remplie ou, selon les boucles, qu'une condition de sortie n'est pas remplie.
 
 ---
 
 # Types de boucles
 
-Les langages proposent en général plusieurs type de boucles :
+- boucle à pré-condition |
+- boucle à post-condition |
+- boucle à condition d'arrêt |
+- boucle itérative |
+- boucle de parcours |
 
+Note:
+Les langages proposent en général plusieurs type de boucles :
 - boucle à pré-condition : la condition est vérifiée avant la première boucle
 - boucle à post-condition : la condition est vérifiée après la première boucle
 - boucle à condition d'arrêt : la condition est vérifiée au milieu de la boucle
@@ -744,14 +755,14 @@ Les langages proposent en général plusieurs type de boucles :
 
 # Boucles pré/post condition
 
+Note:
 Les langages peuvent proposer plusieurs type de boucles à pré et post-condition :
-
 - boucle "tant que", qui est exécuté tant que la condition est vraie (en précondition : "while test ; do quelquechose; done". En postcondition : "do quelquechose; while test")
 - boucle "jusqu'à (ce que)", qui est exécuté jusqu'à ce que la condition soit vraie (pré condition "until test ; do quelquechose; done". En postcondition, "do quelquechose ; until test")
 
 ---
 
-# Exemple de boucle "tant que"
+### Exemple de boucle "tant que"
 
 Structure:
 
@@ -780,7 +791,7 @@ Affichera:
 
 ---
 
-# Exemple de boucle "jusqu'à"
+### Exemple de boucle "jusqu'à"
 
 Structure:
 
@@ -798,10 +809,6 @@ until (( a == 0 )); do
     a=$(( a - 1))
     echo $a
 done
-2
-1
-0
-
 ```
 
 Affichera:
