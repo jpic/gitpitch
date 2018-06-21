@@ -905,19 +905,25 @@ Note:
 
 ---
 
-# Déclaration
+### Déclaration
 
 ```python
 def dire(quoi: str):
 	print(quoi)
 ```
 
-- un mot-clé (procedure, function, action, etc.) dans le cas d'une routine dans un langage les distinguant clairement |
-- l'identifiant de la routine (nom donné par le programmeur à la routine) |
-- la description des paramètres indiquant pour chacun (s'il y a des paramètre) |
-  - l'identifiant (nom) du paramètre |
-  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
-- un corps contenant le code réalisant l'opération dévolue à cette routine |
+- mot-clé |
+- identifiant |
+- paramètres |
+- corps |
+
+Note:
+- un mot-clé (procedure, function, action, etc.) dans le cas d'une routine dans un langage les distinguant clairement
+- l'identifiant de la routine (nom donné par le programmeur à la routine)
+- la description des paramètres indiquant pour chacun (s'il y a des paramètre)
+  - l'identifiant (nom) du paramètre
+  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé)
+- un corps contenant le code réalisant l'opération dévolue à cette routine
 
 ---
 
@@ -1044,21 +1050,23 @@ Note:
 
 ### Fonctions
 
-Comme la procedure:
-
-- un mot-clé (procedure, function, action, etc.) |
-- l'identifiant de la routine (nom donné par le programmeur à la routine) |
-- la description des paramètres indiquant pour chacun (s'il y a des paramètre) |
-  - l'identifiant (nom) du paramètre |
-  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé) |
-- un corps contenant le code réalisant l'opération dévolue à cette routine |
-
-Dans le cas d'une fonction, la déclaration d'une routine comporte aussi : |
-
-- le type de la routine (dans le cas d'une fonction d'un langage typé), c'est-à-dire le type de sa valeur de retour |
-- l'affectation, dans le corps de la routine, d'un résultat à sa valeur de retour |
+- mot-clé |
+- identifiant |
+- paramètres |
+- corps |
+- valeur de retour |
 
 Note:
+Comme la procedure:
+- un mot-clé (procedure, function, action, etc.)
+- l'identifiant de la routine (nom donné par le programmeur à la routine)
+- l'identifiant de la routine (nom donné par le programmeur à la routine)
+- la description des paramètres indiquant pour chacun (s'il y a des paramètre)
+  - l'identifiant (nom) du paramètre
+  - le type (explicite ou implicite) du paramètre (dans le cas d'une routine dans un langage typé)
+- un corps contenant le code réalisant l'opération dévolue à cette routine
+- le type de la routine (dans le cas d'une fonction d'un langage typé), c'est-à-dire le type de sa valeur de retour
+- l'affectation, dans le corps de la routine, d'un résultat à sa valeur de retour
 - Une routine qui retourne une et une seule valeur, conformément à la définition mathématique de fonction.
 - Contrairement a la procédure qui ne retourne rien
 - la fonction est aussi une procédure
