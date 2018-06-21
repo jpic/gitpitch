@@ -1523,220 +1523,217 @@ Un système expert se compose de 3 parties :
 ---?image=assets/image/akinator/0.png
 ---?image=assets/image/akinator/1.png
 ---?image=assets/image/akinator/3.png
----?image=assets/image/akinator/4.png
----?image=assets/image/akinator/5.png
----?image=assets/image/akinator/6.png
----?image=assets/image/akinator/7.png
----?image=assets/image/akinator/8.png
----?image=assets/image/akinator/9.png
----?image=assets/image/akinator/10.png
----?image=assets/image/akinator/11.png
----?image=assets/image/akinator/12.png
----?image=assets/image/akinator/13.png
----?image=assets/image/akinator/14.png
----?image=assets/image/akinator/15.png
----?image=assets/image/akinator/16.png
----?image=assets/image/akinator/17.png
 ---?image=assets/image/akinator/18.png
 ---?image=assets/image/akinator/19.png
 ---?image=assets/image/akinator/20.png
 
 ---
 
-### Heuristiques
+### Boucle de longeur prévisible
 
-Pour certains problèmes, les algorithmes ont une complexité beaucoup trop grande pour obtenir un résultat en temps raisonnable, même si l’on pouvait utiliser une puissance de calcul phénoménale.
+```python
+donnees = [
+  ('jean', '1 rue python'),
+  ('jacques', '3 rue javascript'),
+]
+nom_a_trouver = input('nom ?')
+for nom, addresse in donnees:
+    if nom == nom_a_trouver:
+        print('Addresse : ' + addresse)
+        break
+```
+
+Note:
+L'intérêt d'utiliser un ordinateur n'apparaît clairement que lors de la manipulation de données nombreuses ou traitées de manière répétitive.
+Exemple : Chercher dans une liste de noms et d'adresses, l'adresse d'une personne à partir de son nom. Le nombre de fois qu'il faudra comparer le nom donné aux noms de la liste est dans ce cas inconnu.
+S'il est théoriquement possible de se contenter d'une seule structure de répétition, bien choisie, pour exprimer tous les algorithmes, l'expérience a montré l'utilité d'en définir plusieurs, chacune bien adaptée à des circonstances particulières. Ce sont les boucles tant que, répéter ... jusqu'à et pour.
 
 ---
 
-### Complexité d'un algorithme
+### Boucle de longueur imprévisible
 
-l'étude formelle de la quantité de ressources (par exemple de temps ou
-d'espace) nécessaire à l'exécution de cet algorithme
+```python
+donnees = [
+  ('jean', '1 rue python'),
+  ('jacques', '3 rue javascript'),
+]
+while True:
+    nom_a_trouver = input('nom ?')
+    for nom, addresse in donnees:
+        if nom == nom_a_trouver:
+            print('Addresse : ' + addresse)
+            break
+```
+
+---?code=sample/multiplication.recursive.js&lang=javascript&title=Recursivite
+---?code=sample/multiplication.js&lang=javascript&title=Suppression de la recursivite
+
+---
+
+### Algorithmique et structures de données
 
 C.A.R. Hoare, The 1980 ACM Turing Award Lecture:
 > Il y a deux manières de construire une architecture logicielle: l'une est de la faire tellement simple qu'il n'y a évidemment aucune faille, l'autre est de la faire tellement compliquée qu'il n'y a aucune faille évidente
 
----
-
-### Recherche de pic sur liste a une dimension
-
-| a | b | c | d | e | f | g | h | i |
-| - | - | - | - | - | - | - | - | - |
-| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-
-- 2 est le pic si et seulement si b >= a and b >= b |
-- 9 est le pic si et seulement si i >= h |
-- problème: trouver un pic si possible |
-- est-ce-qu'un pic existe obligatoirement ? |
 
 ---
 
-### Recherche linéaire
+### Type et choix de structures
 
-| 1 | 2 |   |   | n/2 |   |   | n-1 | n |
-| - | - | - | - | -   | - | - | -   | - |
-| . | . | . | . |  .  | . | . |  .  | . |
+- liste |
+- hash |
+- classe |
 
-
-- Parcourir la liste de gauche a droite jusqu'à trouver le pic. |
-- Le meilleur des cas est celui où le pic est le premier dans la liste, le pic est alors trouvé instantanément. |
-- Le pire des cas est celui où le pic est le dernier dans la liste, le pic est alors trouvé après avoir parcouru toute la liste |
-
----
-### Recherche linéaire: complexté
-
-- Si la liste contient 30 000 items, le pire cas demandera 30 000 étapes.
-- La complexité dans le pire des cas de cette première méthode pour n entrées dans l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n : il faut parcourir tous les n items une fois |
+Note:
+Les structures de données les plus courantes sont faciles à utiliser avec un language de programmation, car son compilateur intègre des algorithmes pour les gérer à bas niveau
 
 ---
 
-### Comment optimiser l'algorithme ?
+### Utiliser la structure depuis l'algorithme
+
+```python
+donnees = {
+    'jean': '1 rue du python',
+    'marc': '3 rue javascriptonite',
+}
+nom = input('nom ?')
+if nom in donnees:
+    print('Addresse : ' + donnees[nom])
+else:
+    print('Non trouvé !')
+```
 
 ---
-### Recherche dichotomique : diviser et concquerir
 
-Ouvrir la liste au milieu, si le nombre qui s'y trouve est plus loin
-que le max, regarder avant, sinon, regarder après.
+### Bonnes pratiques pour les algorithmes et pour les structures
 
-Refaire l'opération qui consiste à couper les demi-annuaires (puis les quarts
-d'annuaires, puis les huitièmes d'annuaires, etc.) jusqu'à trouver le nom
-cherché.
+Note:
+En fait, chaque instruction a un cout. Et oui, la machine de Turing n'implique aucune limite de temps ni d'espace ! Mais l'ordinnateur implique une limite d'espace, concernant le temps .... on pourrait laisser des algorithmes tourner pendant des années
+On travaille la structure de ses algos sur papier / tableau ! Ca va bcp plus vite, parfois c'est tellmeent complexe qu'on peut pas faire autrement
+Early optim is root of all evil
+Autant que possible, essayer toutes les possibilités offertes par le language
+Sacrifier la lisibilité du code ? Pas en v1 !!!
+Pas avant que ce soit vraiment necessaire
 
 ---
+
+### Ce qu'est l'optimisation, quoi optimiser : bonnes pratiques
+
+- la liste des fonctions appelées et le temps passé dans chacune d'elles |
+- l'utilisation processeur |
+- l'utilisation mémoire. |
+- les délais d'accès aux données |
+
+Note:
+En informatique, le profilage de code (ou code profiling en anglais) consiste à analyser l'exécution d'un logiciel afin de connaitre son comportement à l'exécution.
+Le profilage de code permet de contrôler lors de l'exécution d'un logiciel :
+- la liste des fonctions appelées et le temps passé dans chacune d'elles ;
+- l'utilisation processeur ;
+- l'utilisation mémoire.
+Le profilage du code est implémenté par instrumentation du code source en rajoutant des instructions au code source originel qui permettent de mesurer le comportement du logiciel lors de l'exécution. Ensuite, un scénario d'utilisation est défini et exécuté sur le logiciel instrumenté. Les données de profilage sont récoltées et analysées à la fin de l'exécution.
+Le profilage est utilisé pour identifier les parties de code qu'il faut optimiser selon le principe que l'« on ne peut pas optimiser ce que l'on ne sait pas mesurer » (adaptation du « Si vous ne pouvez pas le mesurer, vous ne pouvez pas le gérer » de Kaplan, co-inventeur du tableau de bord prospectif).
+Les données de profilage peuvent aussi être fournies au compilateur lors d'une recompilation du logiciel pour qu'il optimise ce profil d'utilisation. C'est ce que l'on appelle l'optimisation dirigée par les profils (ou « profile-guided optimization » en anglais).
+
+---
+
+### La performance et la complexité
+
+Note:
+L'analyse de la complexité d'un algorithme consiste en l'étude formelle de la quantité de ressources (par exemple de temps ou d'espace) nécessaire à l'exécution de cet algorithme. Celle-ci ne doit pas être confondue avec la théorie de la complexité, qui elle étudie la difficulté intrinsèque des problèmes, et ne se focalise pas sur un algorithme en particulier.
+Quand les scientifiques ont voulu énoncer formellement et rigoureusement ce qu'est l'efficacité d'un algorithme ou au contraire sa complexité, ils se sont rendus compte que la comparaison des algorithmes entre eux était nécessaire et que les outils pour le faire à l'époque1 étaient primitifs. Dans la préhistoire de l'informatique (les années 1950), la mesure publiée, si elle existait, était souvent dépendante du processeur utilisé, des temps d'accès à la mémoire vive et de masse, du langage de programmation et du compilateur utilisé.
+Une approche indépendante des facteurs matériels était donc nécessaire pour évaluer l'efficacité des algorithmes. Donald Knuth fut un des premiers à l'appliquer systématiquement dès les premiers volumes de sa série The Art of Computer Programming. Il complétait cette analyse de considérations propres à la théorie de l'information : celle-ci par exemple, combinée à la formule de Stirling, montre que, dans le pire des cas, il n'est pas possible d'effectuer, sur un ordinateur classique, un tri général (c'est-à-dire uniquement par comparaisons) de N éléments en un temps croissant avec N moins rapidement que N ln N.
+L'approche la plus classique est donc de calculer le temps de calcul dans le pire des cas.
+Il existe au moins trois alternatives à l'analyse de la complexité dans le pire des cas. La complexité en moyenne des algorithmes, à partir d'une répartition probabiliste des tailles de données, tente d'évaluer le temps moyen que l'on peut attendre de l'évaluation d'un algorithme sur une donnée d'une certaine taille. La complexité amortie des structures de données consiste à déterminer le coût de suites d'opérations. L'analyse lisse d'algorithme, plus récente, se veut plus proche des situations réelles en calculant la complexité dans le pire des cas sur des instances légèrement bruitées.
 
 ---?image=assets/image/complexite-algorithmique.png
 
 ---
-## Tips!
 
-<br>
+### Les heuristiques
 
-@fa[arrows gp-tip](Press F to go Fullscreen)
-
-@fa[microphone gp-tip](Press S for Speaker Notes)
-
----?image=assets/image/kyle-gregory-devaras.jpg
-
-## Template Features
-
-- Code Presenting |
-- Repo Source, Static Blocks, GIST |
-- Custom CSS Styling |
-- Slideshow Background Image |
-- Slide-specific Background Images |
-- Custom Logo, TOC, and Footnotes |
-
----?code=sample/go/server.go&lang=golang&title=Golang File
-
-@[1,3-6](Present code found within any repo source file.)
-@[8-18](Without ever leaving your slideshow.)
-@[19-28](Using GitPitch code-presenting with (optional) annotations.)
-
----?image=assets/image/john-reign-abarintos.jpg
-
-@title[JavaScript Block]
-
-<p><span class="slide-title">JavaScript Block</span></p>
-
-```javascript
-// Include http module.
-var http = require("http");
-
-// Create the server. Function passed as parameter
-// is called on every request made.
-http.createServer(function (request, response) {
-  // Attach listener on end event.  This event is
-  // called when client sent, awaiting response.
-  request.on("end", function () {
-    // Write headers to the response.
-    // HTTP 200 status, Content-Type text/plain.
-    response.writeHead(200, {
-      'Content-Type': 'text/plain'
-    });
-    // Send data and end response.
-    response.end('Hello HTTP!');
-  });
-
-// Listen on the 8080 port.
-}).listen(8080);
-```
-
-@[1,2](You can present code inlined within your slide markdown too.)
-@[9-17](Displayed using code-syntax highlighting just like your IDE.)
-@[19-20](Again, all of this without ever leaving your slideshow.)
-
----?gist=onetapbeyond/494e0fecaf0d6a2aa2acadfb8eb9d6e8&lang=scala&title=Scala GIST
-
-@[23](You can even present code found within any GitHub GIST.)
-@[41-53](GIST source code is beautifully rendered on any slide.)
-@[57-62](And code-presenting works seamlessly for GIST too, both online and offline.)
-
----?image=assets/image/kyle-gregory-devaras.jpg
-
-## Template Help
-
-- [Code Presenting](https://github.com/gitpitch/gitpitch/wiki/Code-Presenting)
-  + [Repo Source](https://github.com/gitpitch/gitpitch/wiki/Code-Delimiter-Slides), [Static Blocks](https://github.com/gitpitch/gitpitch/wiki/Code-Slides), [GIST](https://github.com/gitpitch/gitpitch/wiki/GIST-Slides)
-- [Custom CSS Styling](https://github.com/gitpitch/gitpitch/wiki/Slideshow-Custom-CSS)
-- [Slideshow Background Image](https://github.com/gitpitch/gitpitch/wiki/Background-Setting)
-- [Slide-specific Background Images](https://github.com/gitpitch/gitpitch/wiki/Image-Slides#background)
-- [Custom Logo](https://github.com/gitpitch/gitpitch/wiki/Logo-Setting), [TOC](https://github.com/gitpitch/gitpitch/wiki/Table-of-Contents), and [Footnotes](https://github.com/gitpitch/gitpitch/wiki/Footnote-Setting)
-
----?image=assets/image/kyle-gregory-devaras.jpg
-
-## Go GitPitch Pro!
-
-<br>
-<div class="left">
-    <i class="fa fa-user-secret fa-5x" aria-hidden="true"> </i><br>
-    <a href="https://gitpitch.com/pro-features" class="pro-link">
-    More details here.</a>
-</div>
-<div class="right">
-    <ul>
-        <li>Private Repos</li>
-        <li>Private URLs</li>
-        <li>Password-Protection</li>
-        <li>Image Opacity</li>
-        <li>SVG Image Support</li>
-    </ul>
-</div>
-
----?image=assets/image/kyle-gregory-devaras.jpg
-
-### Questions?
-
-<br>
-
-@fa[twitter gp-contact](@gitpitch)
-
-@fa[github gp-contact](gitpitch)
-
-@fa[medium gp-contact](@gitpitch)
-
----?image=assets/image/gitpitch-audience.jpg
-
-@title[Download this Template!]
+Note:
+Au sens le plus large, l'heuristique est la psychologie de la découverte, abordée par différents mathématiciens.
+Au sens étroit, plus fréquent, une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d'optimisation difficile.
 
 ---
 
-### Credits
+### Heuristique au sens large: Aspect psychologique
 
-Remerciements aux créateurs de contenus qui m'ont aidé à faire cette présentation:
+- la prise en compte du problème |
+- l'incubation / recherche de solution / rumination |
+- l'illumination / découverte de solution |
+- l'explicitation |
+- la validation |
 
-- Wikipedia
-- [Cours du MIT sur les algorithmes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/lecture-videos/)
-- [Cours du MIT sur les mathématiques pour l'inforhmatique](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-fall-2010/)
-- [Sam & Max](http://sametmax.com/) pour l'exemple sur les noms de variables
+Note:
+On distingue en général plusieurs temps
+- la prise en compte du problème (question, contexte : données, contraintes, acteurs, tenants et aboutissants)
+- l'incubation, recherche de solution, rumination parfois très longue ; la méthode du problème résolu peut ici dégager les conditions nécessaires à respecter.
+- l'illumination (ou découverte de solution)
+- l'explicitation, qui descend dans les détails
+- la validation (qui doit relancer le processus en cas d'échec)
 
-### Get your presentation started!
-### [Download this template @fa[external-link gp-download]](https://gitpitch.com/template/download/space)
+---
 
-# Formation Algorithmique
+### Heuristique: en mathématiques
 
-### Introduction
+- c'est un problème connu (ou un cas particulier) |
+- c'est un problème qu'on peut ramener à une combinaison de problèmes plus simples |
+- c'est un problème ressemblant à un problème qu'on sait traiter. |
 
+Note:
+Polya a abordé ces questions sous l'angle des mathématiques.
+Il distingue les niveaux opératoires, tactiques et stratégiques. Le premier regroupe des savoir-faire élémentaires, le dernier est le plus intuitif et le plus difficile. Mais l'expérience rend les niveaux inférieurs de plus en plus riches et efficaces.
+Une fois le problème bien cerné (question, contexte : données, contraintes, tenants et aboutissants), selon les cas
+- c'est un problème connu (ou un cas particulier) ;
+- c'est un problème qu'on peut ramener à une combinaison de problèmes plus simples ;
+- c'est un problème ressemblant à un problème qu'on sait traiter.
+Le premier cas se produit d'autant plus souvent qu'on a plus d'expérience ; il peut demander une adaptation, afin de ne pas "écraser une noisette avec un marteau-pilon".
+Le second cas correspond à une analyse cartésienne, et utilise le premier comme critère d'arrêt.
+Le troisième cas est le plus intuitif, fertile mais incertain, car les problèmes analogues ont souvent, mais pas toujours, des solutions analogues ; de plus, si l'analogie est trop lointaine, on peut devoir la fragmenter en plusieurs stades intermédiaires.
+Finalement, lorsqu'un plan d'action a été trouvé, on l'explicite pour le mettre en œuvre.
+Si le résultat n'est pas bon, on remet en cause la démarche.
+Si le résultat est correct, il est bon de voir si on peut faire mieux, plus efficace ou plus général, afin d'enrichir son expérience.
+
+---
+
+# Heuristique
+
+### méthode de calcul
+
+Note:
+Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d'optimisation difficile. C'est un concept utilisé entre autres en optimisation combinatoire, en théorie des graphes, en théorie de la complexité des algorithmes et en intelligence artificielle.
+Une heuristique s'impose quand les algorithmes de résolution exacte sont de complexité exponentielle, et dans beaucoup de problèmes difficiles. L'usage d'une heuristique est aussi pertinent pour calculer une solution approchée d'un problème ou pour accélérer le processus de résolution exacte. Généralement, une heuristique est conçue pour un problème particulier, en s'appuyant sur sa structure propre, mais les approches peuvent contenir des principes plus généraux.
+Ainsi la méthode gloutonne est une heuristique. C'est le cas
+- du rendu de monnaie par divisions successives,
+- de la méthode du plus proche voisin pour le problème du voyageur de commerce.
+On parle de métaheuristique pour les méthodes approximatives générales, pouvant s'appliquer à différents problèmes (comme le recuit simulé par exemple).
+
+---
+
+### Qualité d'une heuristique
+
+- Qualité du résultat |
+- Coût de l'heuristique |
+- Remise en cause du contexte originel |
+- Étendue du domaine d'application |
+
+Note:
+Elle peut s'évaluer selon divers critères  :
+- Qualité du résultat : on implémente l'heuristique et on évalue la qualité de ses solutions par rapport aux solutions optimales (ou aux meilleures solutions connues), soit en termes de distance, soit en termes de probabilité de réussite. Ceci passe par la mise en place d'un jeu d'essai ou benchmark, ensemble d'instances d'un même problème accessible à tous.
+- Coût de l'heuristique : complexité (temps, espace) de l'heuristique.
+- Remise en cause du contexte originel : heuristique positive visant à enrichir le paradigme, mais sans remettre en cause son noyau dur.
+- Étendue du domaine d'application (domaine d'optimalité et domaine d'admissibilité des solutions).
+Ces critères permettent de comparer les heuristiques résolvant un même problème, afin de dégager les heuristiques dominantes.
+Certaines sont non compétitives, d'autres se révèlent utiles dans les cas simples, ou au contraire ne se montrent efficaces que si elles s'attaquent à des problèmes conséquents.
+Enfin, si une méthode algorithmique est hors d'atteinte, on peut mettre en concurrence diverses heuristiques pour profiter de l'ensemble de leurs domaines d'activités.
+
+---
+
+### Algorithme glouton
+
+Note:
+En informatique, un algorithme glouton (greedy algorithm en anglais, parfois appelé aussi algorithme gourmand) est un algorithme qui suit le principe de faire, étape par étape, un choix optimum local. Dans certains cas cette approche permet d'arriver à un optimum global, mais dans le cas général c'est une heuristique. L'illustration ci-contre montre un cas où ce principe est mis en échec.
 
 ---?image=assets/image/gitpitch-audience.jpg
 
