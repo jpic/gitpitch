@@ -1699,9 +1699,10 @@ Si le résultat est correct, il est bon de voir si on peut faire mieux, plus eff
 
 # Heuristique
 
-### méthode de calcul
+### méthode de calcul |
 
 Note:
+L'heuristique (du grec ancien εὑρίσκω, eurisko, « je trouve »1), parfois orthographiée euristique, est un terme de didactique qui signifie « l'art d'inventer, de faire des découvertes »2.
 Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d'optimisation difficile. C'est un concept utilisé entre autres en optimisation combinatoire, en théorie des graphes, en théorie de la complexité des algorithmes et en intelligence artificielle.
 Une heuristique s'impose quand les algorithmes de résolution exacte sont de complexité exponentielle, et dans beaucoup de problèmes difficiles. L'usage d'une heuristique est aussi pertinent pour calculer une solution approchée d'un problème ou pour accélérer le processus de résolution exacte. Généralement, une heuristique est conçue pour un problème particulier, en s'appuyant sur sa structure propre, mais les approches peuvent contenir des principes plus généraux.
 Ainsi la méthode gloutonne est une heuristique. C'est le cas
@@ -1730,10 +1731,55 @@ Enfin, si une méthode algorithmique est hors d'atteinte, on peut mettre en conc
 
 ---
 
-### Algorithme glouton
+### Recherche de pic sur liste a une dimension
+
+| a | b | c | d | e | f | g | h | i |
+| - | - | - | - | - | - | - | - | - |
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+
+- 2 est le pic si et seulement si b >= a and c >= b |
+- 9 est le pic si et seulement si i >= h |
+- problème: trouver un pic si possible |
+- est-ce-qu'un pic existe obligatoirement ? |
+
+---
+
+### Recherche linéaire
+
+| 1 | 2 |   |   | n/2 |   |   | n-1 | n |
+| - | - | - | - | -   | - | - | -   | - |
+| . | . | . | . |  .  | . | . |  .  | . |
 
 Note:
-En informatique, un algorithme glouton (greedy algorithm en anglais, parfois appelé aussi algorithme gourmand) est un algorithme qui suit le principe de faire, étape par étape, un choix optimum local. Dans certains cas cette approche permet d'arriver à un optimum global, mais dans le cas général c'est une heuristique. L'illustration ci-contre montre un cas où ce principe est mis en échec.
+- Parcourir la liste de gauche a droite jusqu'à trouver le pic.
+- Le meilleur des cas est celui où le pic est le premier dans la liste, le pic est alors trouvé instantanément.
+- Le pire des cas est celui où le pic est le dernier dans la liste, le pic est alors trouvé après avoir parcouru toute la liste
+
+---
+
+### Recherche linéaire: complexté
+
+Note:
+- Si la liste contient 30 000 items, le pire cas demandera 30 000 étapes.
+- La complexité dans le pire des cas de cette première méthode pour n entrées dans l'annuaire fourni est O(n), ça veut dire que dans le pire des cas, le temps de calcul est de l'ordre de grandeur de n : il faut parcourir tous les n items une fois |
+
+---
+
+### Recherche dichotomique : diviser et concquerir
+
+Note:
+Ouvrir la liste au milieu, si le nombre qui s'y trouve est plus loin
+que le max, regarder avant, sinon, regarder après.
+Refaire l'opération qui consiste à couper les demi-annuaires (puis les quarts
+d'annuaires, puis les huitièmes d'annuaires, etc.) jusqu'à trouver le nom
+cherché.
+
+---?image=assets/image/darb.png&title=Art algorithmique
+
+
+Note:
+L'art algorithmique, également connu sous le nom d'art des algorithmes, est l'art, et plus précisément l'art visuel, dont la conception est générée par un algorithme. Les artistes algorithmiques sont parfois appelés algoristes.
+L'art algorithmique est un sous-domaine de l'art génératif (généré par un système autonome) et est lié à l'art des systèmes (influencé par la théorie des systèmes). L'art fractal est un exemple d'art algorithmique1.
 
 ---?image=assets/image/gitpitch-audience.jpg
 
