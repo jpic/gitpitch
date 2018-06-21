@@ -206,12 +206,12 @@ Vus comme un modèle de calcul les automates finis ont un potentiel faible ; ils
 
 ### Machine de Turing
 
-- un alphabet fini,
-- un ruban infini,
-- une tête de lecture et écriture,
-- un ensemble fini d'états,
-- une table d'actions,
-- un etat initial,
+- un alphabet fini, |
+- un ruban infini, |
+- une tête de lecture et écriture, |
+- un ensemble fini d'états, |
+- une table d'actions, |
+- un etat initial, |
 
 Note:
 - En informatique théorique, une machine de Turing est un modèle abstrait du fonctionnement des appareils mécaniques de calcul, tel un ordinateur et sa mémoire.
@@ -285,12 +285,12 @@ La tête de lecture/écriture peut lire et écrire les symboles sur le ruban, et
 
 ### Résumé
 
-- un alphabet fini,
-- un ruban infini,
-- une tête de lecture et écriture,
-- un ensemble fini d'états,
-- une table d'actions,
-- un etat initial,
+- un alphabet fini, |
+- un ruban infini, |
+- une tête de lecture et écriture, |
+- un ensemble fini d'états, |
+- une table d'actions, |
+- un etat initial, |
 
 Note:
 Une « machine » de Turing est un concept abstrait, c'est-à-dire un objet mathématique comportant :
@@ -384,27 +384,27 @@ Note:
 
 Par exemple une variable en C++ aura six caractéristiques :
 
-- nom
-- durée de vie
-- type
-- valeur
-- adresse
-- portée
-- visibilité
+- nom |
+- durée de vie |
+- type |
+- valeur |
+- adresse |
+- portée |
+- visibilité |
 
 ---
 
 ### Nom de variable
 
-```c
-    _var
-    __var2
-    Var
-```
+- _var
+- __var2
+- Var
 
 Note:
 - Dans certains langages, les noms de variables (comme ceux des identificateurs) doivent nécessairement commencer par une lettre (majuscule ou minuscule) ou par un $. Les autres caractères composant le nom de la variable doivent être une lettre, un chiffre. La différenciation des majuscules et des minuscules (sensibilité à la casse) dans le nom d'une variable dépend du langage considéré.
 - En Python, il n’y a pas de déclaration de type. Le nom d’une variable a donc d’autant plus d’importance pour expliquer ce qu’il y a dedans.
+
+---
 
 ### Nom invalide
 
@@ -502,17 +502,16 @@ Note:
 
 # Types paramétrés
 
-Par exemple la déclaration des pointeurs ou des tableaux en langage C nécessite de préciser le type qui doit servir de base aux données manipulées. La programmation générique étend cette pratique pour permettre à l'utilisateur de créer ses propres types paramétrés.
-
 ```java
 Collection<String> coll = new LinkedList<String>();
 ```
 
+Note:
+Par exemple la déclaration des pointeurs ou des tableaux en langage C nécessite de préciser le type qui doit servir de base aux données manipulées. La programmation générique étend cette pratique pour permettre à l'utilisateur de créer ses propres types paramétrés.
+
 ---
 
 # Types énumérés
-
-Des langages permettent au développeur de définir des types spécifiques à son application. Les types énumérés correspondent à des ensembles « finis » (cf. les remarques ci-après) de valeurs possibles pour une variable. Le code suivant illustre la définition d'un nouveau type, suivie de la déclaration d'une variable typée :
 
 ```c
 type couleur : {rouge, bleu, vert};
@@ -520,29 +519,32 @@ var c : couleur;  // La variable c, du type couleur, peut prendre les valeurs
 	                // rouge, bleu ou vert uniquement.
 ```
 
+Note:
+Des langages permettent au développeur de définir des types spécifiques à son application. Les types énumérés correspondent à des ensembles « finis » (cf. les remarques ci-après) de valeurs possibles pour une variable. Le code suivant illustre la définition d'un nouveau type, suivie de la déclaration d'une variable typée :
+
 ---
 
 # Types composés
 
-Les types composés (struct en C, record en Pascal) permettent de grouper plusieurs champs de types distincts dans une même variable (qui contient alors des « sous-variables »).
-
-En programmation orientée objet, on nomme classe un type composé associé à du code spécifique — la définition des méthodes de la classe — propre à la manipulation de variables de ce type.
+Note:
+- Les types composés (struct en C, record en Pascal) permettent de grouper plusieurs champs de types distincts dans une même variable (qui contient alors des « sous-variables »).
+- En programmation orientée objet, on nomme classe un type composé associé à du code spécifique — la définition des méthodes de la classe — propre à la manipulation de variables de ce type.
 
 ---
 
 # Types hiérarchiques
 
+Note:
 La programmation orientée objet étend le paradigme précédent en organisant hiérarchiquement les classes de telle manière qu'une variable d'une sous-classe puisse être utilisée de manière transparente à la place de n'importe quelle classe située à un niveau supérieur dans la hiérarchie définie.
 
 ---
 
 # Types opaques
 
-Un type opaque est un type incomplètement défini et/ou dont la nature est masquée. Le développeur ne peut ni en examiner le contenu, ni le modifier, et doit simplement le stocker et le transmettre. À cet effet, seule la taille d'un type opaque est réellement connue.
-
-Typiquement, les données opaques sont des handles (terminologie Windows), des descripteurs de fichier (terminologie Unix), des clés, des pointeurs vers des structures masquées (ex. : `FILE*` de la bibliothèque standard du C), etc. La seule notion cruciale, c'est qu'une variable opaque est fournie via une fonction dédiée de création (de type constructeur), transmise telle quelle aux fonctions utilisatrices (souvent via un passage par référence), et enfin détruite via une fonction de libération (de type destructeur).
-
-La possibilité – ou non – d'avoir des types opaques est totalement dépendante du langage de programmation utilisé.
+Note:
+- Un type opaque est un type incomplètement défini et/ou dont la nature est masquée. Le développeur ne peut ni en examiner le contenu, ni le modifier, et doit simplement le stocker et le transmettre. À cet effet, seule la taille d'un type opaque est réellement connue.
+- Typiquement, les données opaques sont des handles (terminologie Windows), des descripteurs de fichier (terminologie Unix), des clés, des pointeurs vers des structures masquées (ex. : `FILE*` de la bibliothèque standard du C), etc. La seule notion cruciale, c'est qu'une variable opaque est fournie via une fonction dédiée de création (de type constructeur), transmise telle quelle aux fonctions utilisatrices (souvent via un passage par référence), et enfin détruite via une fonction de libération (de type destructeur).
+- La possibilité – ou non – d'avoir des types opaques est totalement dépendante du langage de programmation utilisé.
 
 ---
 
@@ -551,9 +553,9 @@ La possibilité – ou non – d'avoir des types opaques est totalement dépenda
 - prédéfinis: booléan, entier (signé/non-signé), réel (virgule flottante), ... |
 - paramétrés: types qui prennent d'autres type en paramètre, |
 - énumérés: ensembles « finis » de valeurs possibles, |
-- composés: struct (C), record (Pascal), class (Python),
-- hiérarchiques: sous classes
-- opaques: descripteurs de fichiers, clés ...
+- composés: struct (C), record (Pascal), class (Python), |
+- hiérarchiques: sous classes |
+- opaques: descripteurs de fichiers, clés ... |
 
 ---
 
